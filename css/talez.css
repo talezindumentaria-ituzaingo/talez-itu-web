@@ -1,6 +1,6 @@
 :root{
-    --color-principal: #FF5A5F;
-    --color-primary-hover:#d64246;
+    --color-principal: #ffcb5a;
+    --color-primary-hover:#d6aa42;
     --color-verde:#04A75B;
     --color-negro: #444A47;
     --color-fondo: #F7F9FD;
@@ -106,7 +106,7 @@ img{
 
 .hm-header{
     position: relative;
-    height: 64px;
+    height: 170px;
     background: #fff;
     line-height: 64px;
     -webkit-transition: all .6s ease-in-out;
@@ -114,12 +114,12 @@ img{
     -ms-transition: all .6s ease-in-out;
     -o-transition: all .6s ease-in-out;
     transition: all .6s ease-in-out;
-    margin-top: 20px;
-    margin-bottom: 20px;
+    margin-top: 5px;
+    margin-bottom: 5px;
     box-sizing: border-box;
 }
 .hm-header .container{
-    height: 100%;
+    height: auto;
 }
 
 .hm-header.header-fixed{
@@ -330,7 +330,7 @@ img{
 }
 
 .hm-tabs .hm-tab-link.active .tabs-content{
-    background: red;
+    background: rgb(241, 234, 49);
 }
 /* CONTENIDO TABs */
 .tabs-content{
