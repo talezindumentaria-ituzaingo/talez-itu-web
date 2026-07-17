@@ -1,0 +1,21 @@
+# Carpetas del sistema y del editor
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Archivos de entorno (¡AQUÍ VAN TUS CLAVES SECRETAS!)
+# Nunca subas tus contraseñas de Mercado Pago, WhatsApp o Instagram a GitHub
+.env
+.env.local
+.env.*.local
+config.json
+
+# Carpetas de desarrollo (Si usasNode.js o herramientas de diseño)
+node_modules/
+dist/
+build/
+.clasp.json
+
+# Archivos temporales o de logs
+*.log
+npm-debug.log*
