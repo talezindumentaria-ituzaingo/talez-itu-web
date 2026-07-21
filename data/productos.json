@@ -1,0 +1,389 @@
+[
+  {
+    "ID PROD": "TH001-001",
+    "DESCRIPCIÓN": "Camiseta térmica ADIDAS color AZUL talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "ADIDAS",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "TH001-002",
+    "DESCRIPCIÓN": "Camiseta térmica ADIDAS color BORDO talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "ADIDAS",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "TH001-003",
+    "DESCRIPCIÓN": "Camiseta térmica ADIDAS color BLANCA talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "ADIDAS",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "TH001-004",
+    "DESCRIPCIÓN": "Camiseta térmica ADIDAS color PETRÓLEO talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "ADIDAS",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "TH001-005",
+    "DESCRIPCIÓN": "Camiseta térmica ADIDAS color NEGRA talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "ADIDAS",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "TH002-001",
+    "DESCRIPCIÓN": "Camiseta térmica NIKE color AZUL talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "NIKE",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "TH002-002",
+    "DESCRIPCIÓN": "Camiseta térmica NIKE color BLANCA talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "NIKE",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "TH002-003",
+    "DESCRIPCIÓN": "Camiseta térmica NIKE color BORDO talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "NIKE",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "TH002-004",
+    "DESCRIPCIÓN": "Camiseta térmica NIKE color NEGRA talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "NIKE",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "TH002-005",
+    "DESCRIPCIÓN": "Camiseta térmica NIKE color PETRÓLEO talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "NIKE",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "TH003-001",
+    "DESCRIPCIÓN": "Camiseta térmica UNDER ARMOUR color AZUL FRANCIA talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "UNDER ARMOUR",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "TH003-002",
+    "DESCRIPCIÓN": "Camiseta térmica UNDER ARMOUR color BLANCA talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "UNDER ARMOUR",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "TH003-003",
+    "DESCRIPCIÓN": "Camiseta térmica UNDER ARMOUR color BORDO talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "UNDER ARMOUR",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "TH003-004",
+    "DESCRIPCIÓN": "Camiseta térmica UNDER ARMOUR color NEGRO talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "UNDER ARMOUR",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "TH003-005",
+    "DESCRIPCIÓN": "Camiseta térmica UNDER ARMOUR color PETRÓLEO talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "UNDER ARMOUR",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "TM001-001",
+    "DESCRIPCIÓN": "Camiseta térmica MARMELL color AZUL OSCURO talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "MUJER",
+    "MARCA": "MARMELL",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "TM001-002",
+    "DESCRIPCIÓN": "Camiseta térmica MARMELL color VERDE GASPEADO talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "MUJER",
+    "MARCA": "MARMELL",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "TM001-003",
+    "DESCRIPCIÓN": "Camiseta térmica MARMELL color BEIGE talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "MUJER",
+    "MARCA": "MARMELL",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "TM001-004",
+    "DESCRIPCIÓN": "Camiseta térmica MARMELL color GRIS OSCURO talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "MUJER",
+    "MARCA": "MARMELL",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "TM001-005",
+    "DESCRIPCIÓN": "Camiseta térmica MARMELL color PETRÓLEO talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "MUJER",
+    "MARCA": "MARMELL",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "TM001-006",
+    "DESCRIPCIÓN": "Camiseta térmica MARMELL color GRIS CLARO talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "MUJER",
+    "MARCA": "MARMELL",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "TM001-007",
+    "DESCRIPCIÓN": "Camiseta térmica MARMELL color VERDE talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "MUJER",
+    "MARCA": "MARMELL",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "TM001-008",
+    "DESCRIPCIÓN": "Camiseta térmica MARMELL color ARENA talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "MUJER",
+    "MARCA": "MARMELL",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "TM001-009",
+    "DESCRIPCIÓN": "Camiseta térmica MARMELL color NEGRO talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "MUJER",
+    "MARCA": "MARMELL",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "TM001-010",
+    "DESCRIPCIÓN": "Camiseta térmica MARMELL color ROSA talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "MUJER",
+    "MARCA": "MARMELL",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "TM001-011",
+    "DESCRIPCIÓN": "Camiseta térmica MARMELL color LILA talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "MUJER",
+    "MARCA": "MARMELL",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "TM001-012",
+    "DESCRIPCIÓN": "Camiseta térmica MARMELL color GRIS GASPEADO talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "MUJER",
+    "MARCA": "MARMELL",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "TM001-013",
+    "DESCRIPCIÓN": "Camiseta térmica MARMELL color CELESTE GASPEADO talles M, L y XL",
+    "CATEGORIA": "TÉRMICAS",
+    "SUB CATEGORIA": "MUJER",
+    "MARCA": "MARMELL",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "RDH001-0001",
+    "DESCRIPCIÓN": "Remeras Deportivas Importadas NIKE varios colores Talles S, M, L, XL y XXL",
+    "CATEGORIA": "REMERAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "NIKE",
+    "PRECIO UNITARIO": 20000,
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "RDH001-0002",
+    "DESCRIPCIÓN": "Remeras Deportivas Importadas NIKE color AZUL MARINO Talles S, M, L, XL y XXL",
+    "CATEGORIA": "REMERAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "NIKE",
+    "PRECIO UNITARIO": 20000,
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "RDH001-0003",
+    "DESCRIPCIÓN": "Remeras Deportivas Importadas NIKE color BLANCA Talles S, M, L, XL y XXL",
+    "CATEGORIA": "REMERAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "NIKE",
+    "PRECIO UNITARIO": 20000,
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "RDH001-0004",
+    "DESCRIPCIÓN": "Remeras Deportivas Importadas NIKE color GRIS Talles S, M, L, XL y XXL",
+    "CATEGORIA": "REMERAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "NIKE",
+    "PRECIO UNITARIO": 20000,
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "RDH001-0005",
+    "DESCRIPCIÓN": "Remeras Deportivas Importadas NIKE color NEGRO Talles S, M, L, XL y XXL",
+    "CATEGORIA": "REMERAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "NIKE",
+    "PRECIO UNITARIO": 20000,
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "RDH002-0001",
+    "DESCRIPCIÓN": "Remeras Deportivas Importadas PUMA varios colores Talles S, M, L, XL y XXL",
+    "CATEGORIA": "REMERAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "PUMA",
+    "PRECIO UNITARIO": 20000,
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "RDH002-0002",
+    "DESCRIPCIÓN": "Remeras Deportivas Importadas PUMA color NEGRO Talles S, M, L, XL y XXL",
+    "CATEGORIA": "REMERAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "PUMA",
+    "PRECIO UNITARIO": 20000,
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "RDH002-0003",
+    "DESCRIPCIÓN": "Remeras Deportivas Importadas PUMA color BLANCA Talles S, M, L, XL y XXL",
+    "CATEGORIA": "REMERAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "PUMA",
+    "PRECIO UNITARIO": 20000,
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "RDH002-0004",
+    "DESCRIPCIÓN": "Remeras Deportivas Importadas PUMA color GRIS OSCURO Talles S, M, L, XL y XXL",
+    "CATEGORIA": "REMERAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "PUMA",
+    "PRECIO UNITARIO": 20000,
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "RDH002-0005",
+    "DESCRIPCIÓN": "Remeras Deportivas Importadas PUMA color AZUL MARINO Talles S, M, L, XL y XXL",
+    "CATEGORIA": "REMERAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "PUMA",
+    "PRECIO UNITARIO": 20000,
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "RDH003-0001",
+    "DESCRIPCIÓN": "Remeras Deportivas Importadas LISA varios colores Talles S, M, L, XL y XXL",
+    "CATEGORIA": "REMERAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "LISA",
+    "PRECIO UNITARIO": 20000,
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "RDH003-0002",
+    "DESCRIPCIÓN": "Remeras Deportivas Importadas LISA color NEGRO Talles S, M, L, XL y XXL",
+    "CATEGORIA": "REMERAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "LISA",
+    "PRECIO UNITARIO": 20000,
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "RDH003-0003",
+    "DESCRIPCIÓN": "Remeras Deportivas Importadas LISA color BLANCA Talles S, M, L, XL y XXL",
+    "CATEGORIA": "REMERAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "LISA",
+    "PRECIO UNITARIO": 20000,
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "RDH003-0004",
+    "DESCRIPCIÓN": "Remeras Deportivas Importadas LISA color GRIS Talles S, M, L, XL y XXL",
+    "CATEGORIA": "REMERAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "LISA",
+    "PRECIO UNITARIO": 20000,
+    "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "RDH003-0005",
+    "DESCRIPCIÓN": "Remeras Deportivas Importadas LISA color AZUL MARINO Talles S, M, L, XL y XXL",
+    "CATEGORIA": "REMERAS",
+    "SUB CATEGORIA": "HOMBRE",
+    "MARCA": "LISA",
+    "PRECIO UNITARIO": 20000,
+    "NOMBRE IMAGEN": ""
+  }
+]
