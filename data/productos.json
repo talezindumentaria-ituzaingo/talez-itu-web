@@ -263,7 +263,7 @@
   {
     "ID PROD": "RDH001-0002",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas NIKE color AZUL MARINO Talles S, M, L, XL y XXL",
-    "CATEGORIA": "REMERAS",
+    "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "NIKE",
     "PRECIO UNITARIO": 20000,
@@ -272,7 +272,7 @@
   {
     "ID PROD": "RDH001-0003",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas NIKE color BLANCA Talles S, M, L, XL y XXL",
-    "CATEGORIA": "REMERAS",
+    "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "NIKE",
     "PRECIO UNITARIO": 20000,
@@ -281,7 +281,7 @@
   {
     "ID PROD": "RDH001-0004",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas NIKE color GRIS Talles S, M, L, XL y XXL",
-    "CATEGORIA": "REMERAS",
+    "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "NIKE",
     "PRECIO UNITARIO": 20000,
@@ -290,7 +290,7 @@
   {
     "ID PROD": "RDH001-0005",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas NIKE color NEGRO Talles S, M, L, XL y XXL",
-    "CATEGORIA": "REMERAS",
+    "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "NIKE",
     "PRECIO UNITARIO": 20000,
@@ -299,7 +299,7 @@
   {
     "ID PROD": "RDH002-0001",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas PUMA varios colores Talles S, M, L, XL y XXL",
-    "CATEGORIA": "REMERAS",
+    "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "PUMA",
     "PRECIO UNITARIO": 20000,
@@ -308,7 +308,7 @@
   {
     "ID PROD": "RDH002-0002",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas PUMA color NEGRO Talles S, M, L, XL y XXL",
-    "CATEGORIA": "REMERAS",
+    "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "PUMA",
     "PRECIO UNITARIO": 20000,
@@ -317,7 +317,7 @@
   {
     "ID PROD": "RDH002-0003",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas PUMA color BLANCA Talles S, M, L, XL y XXL",
-    "CATEGORIA": "REMERAS",
+    "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "PUMA",
     "PRECIO UNITARIO": 20000,
@@ -326,7 +326,7 @@
   {
     "ID PROD": "RDH002-0004",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas PUMA color GRIS OSCURO Talles S, M, L, XL y XXL",
-    "CATEGORIA": "REMERAS",
+    "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "PUMA",
     "PRECIO UNITARIO": 20000,
@@ -335,7 +335,7 @@
   {
     "ID PROD": "RDH002-0005",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas PUMA color AZUL MARINO Talles S, M, L, XL y XXL",
-    "CATEGORIA": "REMERAS",
+    "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "PUMA",
     "PRECIO UNITARIO": 20000,
@@ -344,7 +344,7 @@
   {
     "ID PROD": "RDH003-0001",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas LISA varios colores Talles S, M, L, XL y XXL",
-    "CATEGORIA": "REMERAS",
+    "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "LISAS",
     "PRECIO UNITARIO": 20000,
@@ -353,7 +353,7 @@
   {
     "ID PROD": "RDH003-0002",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas LISA color NEGRO Talles S, M, L, XL y XXL",
-    "CATEGORIA": "REMERAS",
+    "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "LISAS",
     "PRECIO UNITARIO": 20000,
@@ -362,7 +362,7 @@
   {
     "ID PROD": "RDH003-0003",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas LISA color BLANCA Talles S, M, L, XL y XXL",
-    "CATEGORIA": "REMERAS",
+    "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "LISAS",
     "PRECIO UNITARIO": 20000,
@@ -371,7 +371,7 @@
   {
     "ID PROD": "RDH003-0004",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas LISA color GRIS Talles S, M, L, XL y XXL",
-    "CATEGORIA": "REMERAS",
+    "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "LISAS",
     "PRECIO UNITARIO": 20000,
@@ -380,7 +380,7 @@
   {
     "ID PROD": "RDH003-0005",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas LISA color AZUL MARINO Talles S, M, L, XL y XXL",
-    "CATEGORIA": "REMERAS",
+    "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "LISAS",
     "PRECIO UNITARIO": 20000,
