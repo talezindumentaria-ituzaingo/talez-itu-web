@@ -11,7 +11,7 @@
   {
     "ID PROD": "TH001-002",
     "DESCRIPCIÓN": "Camiseta térmica ADIDAS color BORDO talles M, L y XL",
-    "CATEGORIA": "TÉRMICAS",
+    "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "ADIDAS",
     "PRECIO UNITARIO": "",
@@ -20,7 +20,7 @@
   {
     "ID PROD": "TH001-003",
     "DESCRIPCIÓN": "Camiseta térmica ADIDAS color BLANCA talles M, L y XL",
-    "CATEGORIA": "TÉRMICAS",
+    "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "ADIDAS",
     "PRECIO UNITARIO": "",
@@ -29,7 +29,7 @@
   {
     "ID PROD": "TH001-004",
     "DESCRIPCIÓN": "Camiseta térmica ADIDAS color PETRÓLEO talles M, L y XL",
-    "CATEGORIA": "TÉRMICAS",
+    "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "ADIDAS",
     "PRECIO UNITARIO": "",
@@ -38,7 +38,7 @@
   {
     "ID PROD": "TH001-005",
     "DESCRIPCIÓN": "Camiseta térmica ADIDAS color NEGRA talles M, L y XL",
-    "CATEGORIA": "TÉRMICAS",
+    "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "ADIDAS",
     "PRECIO UNITARIO": "",
@@ -47,7 +47,7 @@
   {
     "ID PROD": "TH002-001",
     "DESCRIPCIÓN": "Camiseta térmica NIKE color AZUL talles M, L y XL",
-    "CATEGORIA": "TÉRMICAS",
+    "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "NIKE",
     "PRECIO UNITARIO": "",
@@ -56,7 +56,7 @@
   {
     "ID PROD": "TH002-002",
     "DESCRIPCIÓN": "Camiseta térmica NIKE color BLANCA talles M, L y XL",
-    "CATEGORIA": "TÉRMICAS",
+    "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "NIKE",
     "PRECIO UNITARIO": "",
@@ -65,7 +65,7 @@
   {
     "ID PROD": "TH002-003",
     "DESCRIPCIÓN": "Camiseta térmica NIKE color BORDO talles M, L y XL",
-    "CATEGORIA": "TÉRMICAS",
+    "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "NIKE",
     "PRECIO UNITARIO": "",
@@ -74,7 +74,7 @@
   {
     "ID PROD": "TH002-004",
     "DESCRIPCIÓN": "Camiseta térmica NIKE color NEGRA talles M, L y XL",
-    "CATEGORIA": "TÉRMICAS",
+    "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "NIKE",
     "PRECIO UNITARIO": "",
@@ -83,7 +83,7 @@
   {
     "ID PROD": "TH002-005",
     "DESCRIPCIÓN": "Camiseta térmica NIKE color PETRÓLEO talles M, L y XL",
-    "CATEGORIA": "TÉRMICAS",
+    "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "NIKE",
     "PRECIO UNITARIO": "",
@@ -92,7 +92,7 @@
   {
     "ID PROD": "TH003-001",
     "DESCRIPCIÓN": "Camiseta térmica UNDER ARMOUR color AZUL FRANCIA talles M, L y XL",
-    "CATEGORIA": "TÉRMICAS",
+    "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "UNDER ARMOUR",
     "PRECIO UNITARIO": "",
@@ -101,7 +101,7 @@
   {
     "ID PROD": "TH003-002",
     "DESCRIPCIÓN": "Camiseta térmica UNDER ARMOUR color BLANCA talles M, L y XL",
-    "CATEGORIA": "TÉRMICAS",
+    "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "UNDER ARMOUR",
     "PRECIO UNITARIO": "",
@@ -110,7 +110,7 @@
   {
     "ID PROD": "TH003-003",
     "DESCRIPCIÓN": "Camiseta térmica UNDER ARMOUR color BORDO talles M, L y XL",
-    "CATEGORIA": "TÉRMICAS",
+    "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "UNDER ARMOUR",
     "PRECIO UNITARIO": "",
@@ -119,7 +119,7 @@
   {
     "ID PROD": "TH003-004",
     "DESCRIPCIÓN": "Camiseta térmica UNDER ARMOUR color NEGRO talles M, L y XL",
-    "CATEGORIA": "TÉRMICAS",
+    "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "UNDER ARMOUR",
     "PRECIO UNITARIO": "",
@@ -128,7 +128,7 @@
   {
     "ID PROD": "TH003-005",
     "DESCRIPCIÓN": "Camiseta térmica UNDER ARMOUR color PETRÓLEO talles M, L y XL",
-    "CATEGORIA": "TÉRMICAS",
+    "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "UNDER ARMOUR",
     "PRECIO UNITARIO": "",
@@ -137,7 +137,7 @@
   {
     "ID PROD": "TM001-001",
     "DESCRIPCIÓN": "Camiseta térmica MARMELL color AZUL OSCURO talles M, L y XL",
-    "CATEGORIA": "TÉRMICAS",
+    "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "",
@@ -146,7 +146,7 @@
   {
     "ID PROD": "TM001-002",
     "DESCRIPCIÓN": "Camiseta térmica MARMELL color VERDE GASPEADO talles M, L y XL",
-    "CATEGORIA": "TÉRMICAS",
+    "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "",
@@ -155,7 +155,7 @@
   {
     "ID PROD": "TM001-003",
     "DESCRIPCIÓN": "Camiseta térmica MARMELL color BEIGE talles M, L y XL",
-    "CATEGORIA": "TÉRMICAS",
+    "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "",
@@ -164,7 +164,7 @@
   {
     "ID PROD": "TM001-004",
     "DESCRIPCIÓN": "Camiseta térmica MARMELL color GRIS OSCURO talles M, L y XL",
-    "CATEGORIA": "TÉRMICAS",
+    "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "",
@@ -173,7 +173,7 @@
   {
     "ID PROD": "TM001-005",
     "DESCRIPCIÓN": "Camiseta térmica MARMELL color PETRÓLEO talles M, L y XL",
-    "CATEGORIA": "TÉRMICAS",
+    "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "",
@@ -182,7 +182,7 @@
   {
     "ID PROD": "TM001-006",
     "DESCRIPCIÓN": "Camiseta térmica MARMELL color GRIS CLARO talles M, L y XL",
-    "CATEGORIA": "TÉRMICAS",
+    "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "",
@@ -191,7 +191,7 @@
   {
     "ID PROD": "TM001-007",
     "DESCRIPCIÓN": "Camiseta térmica MARMELL color VERDE talles M, L y XL",
-    "CATEGORIA": "TÉRMICAS",
+    "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "",
@@ -200,7 +200,7 @@
   {
     "ID PROD": "TM001-008",
     "DESCRIPCIÓN": "Camiseta térmica MARMELL color ARENA talles M, L y XL",
-    "CATEGORIA": "TÉRMICAS",
+    "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "",
@@ -209,7 +209,7 @@
   {
     "ID PROD": "TM001-009",
     "DESCRIPCIÓN": "Camiseta térmica MARMELL color NEGRO talles M, L y XL",
-    "CATEGORIA": "TÉRMICAS",
+    "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "",
@@ -218,7 +218,7 @@
   {
     "ID PROD": "TM001-010",
     "DESCRIPCIÓN": "Camiseta térmica MARMELL color ROSA talles M, L y XL",
-    "CATEGORIA": "TÉRMICAS",
+    "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "",
@@ -227,7 +227,7 @@
   {
     "ID PROD": "TM001-011",
     "DESCRIPCIÓN": "Camiseta térmica MARMELL color LILA talles M, L y XL",
-    "CATEGORIA": "TÉRMICAS",
+    "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "",
@@ -236,7 +236,7 @@
   {
     "ID PROD": "TM001-012",
     "DESCRIPCIÓN": "Camiseta térmica MARMELL color GRIS GASPEADO talles M, L y XL",
-    "CATEGORIA": "TÉRMICAS",
+    "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "",
@@ -245,7 +245,7 @@
   {
     "ID PROD": "TM001-013",
     "DESCRIPCIÓN": "Camiseta térmica MARMELL color CELESTE GASPEADO talles M, L y XL",
-    "CATEGORIA": "TÉRMICAS",
+    "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "",
