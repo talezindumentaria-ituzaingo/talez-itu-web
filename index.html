@@ -13,9 +13,7 @@
     <link rel="shortcut icon" href="#">
 </head>
 <body>
-
     <div class="hm-wrapper">
-
         <div class="hm-header">
             <div class="container">
                 <div class="header-menu">
@@ -26,10 +24,10 @@
                     </div>
                     <nav class="hm-menu">
                         <ul>
-                            <li><a href="http://">Productos</a></li>
-                            <li><a href="http://">Campañas</a></li>
-                            <li><a href="http://">Nosotros</a></li>
-                            <li><a href="http://">Contacto</a></li>
+                            <li><a href="#indumentaria">Productos</a></li>
+                            <li><a href="#">Campañas</a></li>
+                            <li><a href="#">Nosotros</a></li>
+                            <li><a href="#">Contacto</a></li>
                         </ul>
                         <div class="hm-icon-cart">
                             <a href="#">
@@ -48,52 +46,43 @@
         <div class="header-menu-movil">
             <button class="cerrar-menu"><i class="fas fa-times"></i></button>
             <ul>
-                <li><a href="#">Productos</a></li>
+                <li><a href="#indumentaria">Productos</a></li>
                 <li><a href="#">Campañas</a></li>
                 <li><a href="#">Nosotros</a></li>
                 <li><a href="#">Contacto</a></li>
             </ul>
         </div>
 
-       <!-- <div class="hm-banner">
-            <div class="img-banner">
-                <img src="images/img-banner.jpg" alt="">
-            </div>
-            <a href=""></a>
-        </div>---->
-
         <div class="hm-page-block">
             <div class="container">
                 <div class="header-title">
                     <h1 data-aos="fade-up" data-aos-duration="3000">Categorías</h1>
                 </div>
+                
                 <div class="hm-grid-category">
-                    <!-- Tarjeta 1: El texto entra desde la Izquierda -->
                     <div class="grid-item card-left" data-aos="fade-up" data-aos-duration="1000">
-                        <a href="#">
-                            <img src="images/TERMICAS/ADIDAS HOMBRE/AD-AZUL OSCURO.jpg" alt="ADIDAS HOMBRE">
+                        <a href="#indumentaria" class="cat-trigger" data-target="cat-termicas-hombre">
+                            <img src="images/TERMICAS/ADIDAS/TH001-001.jpg" alt="ADIDAS HOMBRE">
                             <div class="c-info">
-                                <h3>Camisetas Térmicas ADIDAS</h3>
+                                <h3>Camisetas Térmicas HOMBRE</h3>
                             </div>
                         </a>
                     </div>
                     
-                    <!-- Tarjeta 2: El texto entra desde Abajo -->
                     <div class="grid-item card-center" data-aos="fade-up" data-aos-duration="1500">
-                        <a href="#">
-                            <img src="images/TERMICAS/MM MUJER/MM-PETROLEO-GRISCLARO.jpg" alt="TÉRMICA MUJER">
+                        <a href="#indumentaria" class="cat-trigger" data-target="cat-pantalones">
+                            <img src="images/PANTALONES DEPORTIVOS/PDH001-0001.png" alt="PANTALONES DEPORTIVOS">
                             <div class="c-info">
-                                <h3>Camisetas Térmicas MARMELL</h3>
+                                <h3>Pantalones Deportivos</h3>
                             </div>
                         </a>
                     </div>
                     
-                    <!-- Tarjeta 3: El texto entra desde la Derecha -->
                     <div class="grid-item card-right" data-aos="fade-up" data-aos-duration="2000">
-                        <a href="#">
-                            <img src="images/TERMICAS/UA HOMBRE/UA-BORDO.jpg" alt="UA HOMBRE">
+                        <a href="#indumentaria" class="cat-trigger" data-target="cat-remeras">
+                            <img src="images/REMERAS DEPORTIVAS/NIKE/RDH001-0001.png" alt="REMERAS DEPORTIVAS HOMBRE">
                             <div class="c-info">
-                                <h3>Camisetas Térmicas UNDER ARMOUR</h3>
+                                <h3>Remeras Deportivas HOMBRE</h3>
                             </div>
                         </a>
                     </div>
@@ -101,342 +90,47 @@
             </div>
         </div>
 
-        <div class="hm-page-block bg-fondo">
+        <div id="indumentaria" class="hm-page-block bg-fondo">
             <div class="container">
                 <div class="header-title" data-aos="fade-up">
                     <h1>Indumentaria</h1>
                 </div>
 
-                <ul class="hm-tabs" data-aos="fade-up">
-                    <li class="hm-tab-link">ADIDAS</li>
-                    <li class="hm-tab-link">MARMELL</li>
-                    <li class="hm-tab-link">NIKE</li>
-                    <li class="hm-tab-link active">UNDER ARMOUR</li>
+                <ul class="hm-tabs" id="main-tabs" data-aos="fade-up">
+                    <li class="hm-tab-link active" data-tab="cat-termicas-hombre">TERMICAS HOMBRE</li>
+                    <li class="hm-tab-link" data-tab="cat-termicas-mujer">TERMICAS MUJER</li>
+                    <li class="hm-tab-link" data-tab="cat-remeras">REMERAS DEPORTIVAS</li>
+                    <li class="hm-tab-link" data-tab="cat-pantalones">PANTALONES DEPORTIVOS</li>
                 </ul>
 
-                <div class="tabs-content" data-aos="fade-up">
-                    <div class="grid-product">
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="images/TERMICAS/ADIDAS HOMBRE/AD-AZUL OSCURO.jpg" alt="ADIDAS HOMBRE">
-                                </a>
-                                <span class="stin stin-new">Nuevo</span>
-                            </div>
-                            <div class="p-info">
-                               <a href=""><h3>Camisetas Térmicas Adidas Hombre Azul Oscuro</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-                                </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="images/TERMICAS/ADIDAS HOMBRE/AD-BORDO.jpg" alt="ADIDAS H-ROJO">
-                                </a>
-                            </div>
-                            <div class="p-info">
-                               <a href=""><h3>Camisetas Térmicas Adidas Hombre Bordo Talles M. L, y XL</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-                                </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="images/TERMICAS/ADIDAS HOMBRE/AD-BLANCA.jpg" alt="ADIDAS HOMBRE BLANCA">
-                                </a>
-                            </div>
-                            <div class="p-info">
-                               <a href=""><h3>Camisetas Térmicas Adidas Hombre Blanca Talles M. L, y XL</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-                                </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="images/TERMICAS/ADIDAS HOMBRE/AD-PETROLEO.jpg" alt="ADIDAS HOMBRE PETROLEO">
-                                </a>
-                                <span class="stin stin-new">Nuevo</span>
-                            </div>
-                            <div class="p-info">
-                               <a href=""><h3>Camisetas Térmicas Adidas Hombre Petróleo Talles M. L, y XL</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-                                </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="images/TERMICAS/ADIDAS HOMBRE/AD-NEGRO.jpg" alt="ADIDAS HOMBRE NEGRO">
-                                </a>
-                                <span class="stin stin-new">Nuevo</span>
-                            </div>
-                            <div class="p-info">
-                               <a href=""><h3>Camisetas Térmicas Adidas Hombre Negro Talles M. L, y XL</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-                                </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-                        </div>
-                    </div>
+                <div id="sub-tabs-container" data-aos="fade-up">
+                    <ul class="hm-sub-tabs active" id="cat-termicas-hombre">
+                        <li class="hm-sub-tab-link active" data-cat="TERMICAS" data-marca="ADIDAS">ADIDAS</li>
+                        <li class="hm-sub-tab-link" data-cat="TERMICAS" data-marca="NIKE">NIKE</li>
+                        <li class="hm-sub-tab-link" data-cat="TERMICAS" data-marca="UNDER ARMOUR">UNDER ARMOUR</li>
+                    </ul>
+                    <ul class="hm-sub-tabs" id="cat-termicas-mujer">
+                        <li class="hm-sub-tab-link active" data-cat="TERMICAS" data-marca="MARMELL">MARMELL</li>
+                    </ul>
+                    <ul class="hm-sub-tabs" id="cat-remeras">
+                        <li class="hm-sub-tab-link active" data-cat="REMERAS DEPORTIVAS" data-marca="NIKE">NIKE</li>
+                        <li class="hm-sub-tab-link" data-cat="REMERAS DEPORTIVAS" data-marca="PUMA">PUMA</li>
+                        <li class="hm-sub-tab-link" data-cat="REMERAS DEPORTIVAS" data-marca="LISAS">LISAS</li>
+                    </ul>
+                    <ul class="hm-sub-tabs" id="cat-pantalones">
+                    </ul>
                 </div>
 
-                <div class="tabs-content" data-aos="fade-up">
-                    <div class="grid-product">
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="images/TERMICAS/MM MUJER/MM-AZUL-GASPVERDE.jpg" alt="MM-AZUL-GASPVERDE">
-                                </a>
-                                <span class="stin stin-new">Nuevo</span>
-                            </div>
-                            <div class="p-info">
-                               <a href=""><h3>Camisetas Térmicas Marmell Mujer Azul Oscuro y Gaspeada Verde</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-                                </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="images/TERMICAS/MM MUJER/MM-BEIGE-GRISOSCURO.jpg" alt="MM-BEIGE-GRISOSCURO">
-                                </a>
-                                <span class="stin stin-new">Nuevo</span>
-                            </div>
-                            <div class="p-info">
-                               <a href=""><h3>Camisetas Térmicas Marmell Mujer Beige y Gris Oscuro</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-                                </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="images/TERMICAS/MM MUJER/MM-PETROLEO-GRISCLARO.jpg" alt="MM-PETROLEO-GRISCLARO">
-                                </a>
-                            </div>
-                            <div class="p-info">
-                               <a href=""><h3>Camisetas Térmicas Marmell Mujer Petróleo y Gris Claro</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-                                </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="images/TERMICAS/MM MUJER/MM-VERDE-ARENA.jpg" alt="MM-VERDE-ARENA">
-                                </a>
-                            </div>
-                            <div class="p-info">
-                               <a href=""><h3>Camisetas Térmicas Marmell Mujer Verde y Arena</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-                                </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="images/TERMICAS/MM MUJER/MM-VARIOS COLORES.jpg" alt="MM-VARIOS COLORES">
-                                </a>
-                            </div>
-                            <div class="p-info">
-                               <a href=""><h3>Camisetas Térmicas Marmell Mujer Varios Colores</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-                                </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-                        </div>
-                    </div>
+                <div class="grid-product" id="contenedor-productos" data-aos="fade-up">
                 </div>
-
-                <div class="tabs-content" data-aos="fade-up">
-                    <div class="grid-product">
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="images/TERMICAS/NIKE HOMBRE/N-AZUL.jpg" alt="NIKE HOMBRE AZUL">
-                                </a>
-                                <span class="stin stin-new">Nuevo</span>
-                            </div>
-                            <div class="p-info">
-                               <a href=""><h3>Camisetas Térmicas Nike Hombre Azul Talles M. L, y XL</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-                                </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="images/TERMICAS/NIKE HOMBRE/N-BLANCA.jpg" alt="NIKE HOMBRE BLANCA">
-                                </a>
-                            </div>
-                            <div class="p-info">
-                               <a href=""><h3>Camisetas Térmicas Nike Hombre Blanca Talles M. L, y XL</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-                                </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="images/TERMICAS/NIKE HOMBRE/N-BORDO.jpg" alt="NIKE HOMBRE BORDO">
-                                </a>
-                            </div>
-                            <div class="p-info">
-                               <a href=""><h3>Camisetas Térmicas Nike Hombre Bordo Talles M. L, y XL</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-                                </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="images/TERMICAS/NIKE HOMBRE/N-NEGRO.jpg" alt="NIKE HOMBRE NEGRO">
-                                </a>
-                            </div>
-                            <div class="p-info">
-                               <a href=""><h3>Camisetas Térmicas Nike Hombre Negro Talles M. L, y XL</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-                                </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="images/TERMICAS/NIKE HOMBRE/N-PETROLEO.jpg" alt="NIKE HOMBRE PETROLEO">
-                                </a>
-                            </div>
-                            <div class="p-info">
-                               <a href=""><h3>Camisetas Térmicas Nike Hombre Petróleo Talles M. L, y XL</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-                                </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="tabs-content" data-aos="fade-up">
-                    <div class="grid-product">
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="images/TERMICAS/UA HOMBRE/UA-AZUL FRANCIA.jpg" alt="UA AZUL FRANCIA">
-                                </a>
-                                <span class="stin stin-oferta">Oferta</span>
-                            </div>
-                            <div class="p-info">
-                               <a href=""><h3>Camisetas Térmicas Under Armour Hombre Azul Francia Talles M. L, y XL</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-                                    <span class="thash">S/ 00.00</span>
-                                </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="images/TERMICAS/UA HOMBRE/UA-BLANCA.jpg" alt="UA BLANCA">
-                                </a>
-                                <span class="stin stin-oferta">Oferta</span>
-                            </div>
-                            <div class="p-info">
-                               <a href=""><h3>Camisetas Térmicas Under Armour Hombre Blanca Talles M. L, y XL</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-                                    <span class="thash">S/ 00.00</span>
-                                </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="images/TERMICAS/UA HOMBRE/UA-BORDO.jpg" alt="UA BORDO">
-                                </a>
-                                <span class="stin stin-oferta">Oferta</span>
-                            </div>
-                            <div class="p-info">
-                               <a href=""><h3>Camisetas Térmicas Under Armour Hombre Bordo Talles M. L, y XL</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-                                    <span class="thash">S/ 00.00</span>
-                                </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="images/TERMICAS/UA HOMBRE/UA-GRIS OSCURO.jpg" alt="UA GRIS OSCURO">
-                                </a>
-                                <span class="stin stin-oferta">Oferta</span>
-                            </div>
-                            <div class="p-info">
-                               <a href=""><h3>Camisetas Térmicas Under Armour Hombre Gris Oscuro Talles M. L, y XL</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-                                    <span class="thash">S/ 00.00</span>
-                                </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-                        </div>
-                        <div class="product-item">
-                            <div class="p-portada">
-                                <a href="">
-                                    <img src="images/TERMICAS/UA HOMBRE/UA-PETROLEO.jpg" alt="UA PETROLEO">
-                                </a>
-                                <span class="stin stin-oferta">Oferta</span>
-                            </div>
-                            <div class="p-info">
-                               <a href=""><h3>Camisetas Térmicas Under Armour Hombre Petróleo Talles M. L, y XL</h3></a>
-                                <div class="precio">
-                                    <span>S/ 00.00</span>
-                                    <span class="thash">S/ 00.00</span>
-                                </div>
-                                <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </div>
 
         <footer>
             <div class="nav-separator mx-auto mb-4 align-items-center"></div>
             <div class="container text-center align-items-center">
-                <span class="thanks-text glow-trigger">¡Gracias por elegir nuestros productos!</span><span class="main-text glow-trigger"> — Indumentaria Talez — Ituzaingo </span>
+                <span class="thanks-text glow-trigger">¡Gracias por elegir nuestros productos!</span>
+                <span class="main-text glow-trigger"> — Indumentaria Talez — Ituzaingo </span>
             </div>
         </footer>
 
@@ -447,11 +141,9 @@
                 </p>
             </div>
         </div>
-
     </div>
     
     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script src="js/js-talez.js"></script>
-
 </body>
 </html>

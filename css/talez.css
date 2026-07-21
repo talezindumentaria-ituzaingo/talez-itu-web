@@ -19,7 +19,9 @@ body {
   color: var(--text-dark);
   font-family: 'Poppins', sans-serif;
   margin: 0;
-  padding-top: 90px;}
+  padding-top: 90px;
+  scroll-behavior: smooth;
+}
 
 .container {
   max-width: 1200px;
@@ -31,11 +33,11 @@ body {
   background: var(--bg-card);
   border-bottom: 1px solid var(--border-color);
   padding: 12px 0;
-  position: fixed; /* Fixed por defecto para que quede siempre arriba */
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;
-  z-index: 1000; /* Asegura que pase por encima de todo el contenido */
+  z-index: 1000;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
   transition: var(--transition-smooth);
 }
@@ -54,7 +56,6 @@ body {
   align-items: center;
 }
 
-
 .hm-logo {
   display: flex;
   align-items: center;
@@ -62,18 +63,15 @@ body {
 }
 
 .hm-logo img {
-  height: 85px; /* Tamaño imponente, bien visible */
-  width: 85px;  /* Círculo perfecto */
-  object-fit: cover;
+  height: 105px;
+  width: 105px;
   border-radius: 50%;
-  border: 3px solid var(--accent-yellow); /* Borde amarillo de base */
-  box-shadow: 0 0 20px var(--glow-yellow); /* El destello amarillo que faltaba */
   transition: var(--transition-smooth);
 }
 
 .hm-logo img:hover {
-  transform: scale(1.08);
-  box-shadow: 0 0 30px var(--glow-yellow), 0 0 10px var(--accent-yellow); /* Se enciende más al pasar el mouse */
+  transform: scale(2.20);
+  box-shadow: 0 0 5px var(--glow-yellow), 0 0 8px var(--accent-yellow);
 }
 
 .hm-menu {
@@ -200,11 +198,10 @@ body {
   letter-spacing: -0.5px;
 }
 
-/* 1. Categorías con Vida y Desplazamiento */
 .hm-grid-category {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px; /* Un poco más de separación para el despegue visual */
+  gap: 30px;
 }
 
 .grid-item {
@@ -220,9 +217,8 @@ body {
   will-change: transform, box-shadow;
 }
 
-/* Efecto Despegue agresivo del fondo con brillo amarillo */
 .grid-item:hover {
-  transform: translateY(-15px) scale(1.03); /* Se levanta y agranda sutilmente */
+  transform: translateY(-15px) scale(1.03);
   border-color: var(--accent-yellow);
   box-shadow: 0 20px 38px rgba(0, 0, 0, 0.12), 0 0 25px var(--glow-yellow);
 }
@@ -233,7 +229,6 @@ body {
   object-fit: cover;
   transition: transform 0.7s cubic-bezier(0.165, 0.84, 0.44, 1);
 }
-
 
 .grid-item:hover img {
   transform: scale(1.15) translateY(-5px);
@@ -257,7 +252,7 @@ body {
   font-size: 1.2rem;
   font-weight: 600;
   white-space: nowrap;
-  opacity: 0; /* Oculto inicialmente */
+  opacity: 0;
   transition: transform 0.6s cubic-bezier(0.175, 0.885, 0.32, 1.275), 
               opacity 0.4s ease;
 }
@@ -267,29 +262,25 @@ body {
   transform: translate(0, 0) !important; 
 }
 
-/* Tarjeta Izquierda: entra desde la izquierda */
 .card-left .c-info h3 {
   transform: translateX(-105%);
 }
 
-/* Tarjeta Central: entra desde abajo */
 .card-center .c-info h3 {
   transform: translateY(105%);
 }
 
-/* Tarjeta Derecha: entra desde la derecha */
 .card-right .c-info h3 {
   transform: translateX(105%);
 }
 
-/* 2. Tabs tipo Cápsula con Encendido/Apagado Neón */
 .hm-tabs {
   display: flex;
   justify-content: center;
   gap: 15px;
   list-style: none;
   padding: 0;
-  margin-bottom: 45px;
+  margin-bottom: 25px;
   flex-wrap: wrap;
 }
 
@@ -317,17 +308,47 @@ body {
 .hm-tab-link.active {
   background: var(--bg-card);
   color: var(--text-muted);
-    border: 2px solid var(--accent-yellow);
+  border: 2px solid var(--accent-yellow);
   transform: translateY(-2px);
   box-shadow: 0 4px 10px rgba(0,0,0,0.03);
 }
 
-.tabs-content {
+.hm-sub-tabs {
   display: none;
+  justify-content: center;
+  gap: 10px;
+  list-style: none;
+  padding: 0;
+  margin-bottom: 45px;
+  flex-wrap: wrap;
 }
 
-.tabs-content.tab-active {
-  display: block;
+.hm-sub-tabs.active {
+  display: flex;
+}
+
+.hm-sub-tab-link {
+  background: transparent;
+  border: 1px solid var(--border-color);
+  border-radius: var(--radius-capsule);
+  color: var(--text-muted);
+  cursor: pointer;
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 8px 20px;
+  transition: var(--transition-smooth);
+}
+
+.hm-sub-tab-link:hover {
+  border-color: var(--primary-green);
+  color: var(--primary-green);
+}
+
+.hm-sub-tab-link.active {
+  background: var(--primary-green);
+  color: #ffffff;
+  border-color: var(--primary-green);
+  box-shadow: 0 0 15px var(--glow-green);
 }
 
 .grid-product {
@@ -488,9 +509,8 @@ body {
   text-transform: uppercase;
 }
 
-/* 3. Footer Integrado, Centrado y con Destello Real */
 footer {
-  background: var(--bg-main); /* Unificado con el color de la página */
+  background: var(--bg-main);
   padding: 50px 0 30px 0;
   border-top: 1px solid var(--border-color);
   margin-top: 60px;
@@ -531,7 +551,6 @@ footer {
   transition: all 0.8s cubic-bezier(0.175, 0.885, 0.32, 1.275);
 }
 
-/* Efecto Destello Activo por JS (IntersectionObserver) */
 .glow-trigger.active-neon {
   opacity: 1;
   transform: scale(1);
