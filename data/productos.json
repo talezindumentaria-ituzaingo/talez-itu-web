@@ -385,5 +385,14 @@
     "MARCA": "LISA",
     "PRECIO UNITARIO": 20000,
     "NOMBRE IMAGEN": ""
+  },
+  {
+    "ID PROD": "PDH001-0001",
+    "DESCRIPCIÓN": "",
+    "CATEGORIA": "",
+    "SUB CATEGORIA": "",
+    "MARCA": "",
+    "PRECIO UNITARIO": "",
+    "NOMBRE IMAGEN": ""
   }
 ]
