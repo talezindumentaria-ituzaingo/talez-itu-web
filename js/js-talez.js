@@ -9,17 +9,6 @@ window.addEventListener('scroll', () => {
     }
 });
 
-const menu = document.querySelector('.icon-menu');
-const menuClose = document.querySelector('.cerrar-menu');
-
-menu.addEventListener('click', () => {
-    document.querySelector('.header-menu-movil').classList.add('active');
-});
-
-menuClose.addEventListener('click', () => {
-    document.querySelector('.header-menu-movil').classList.remove('active');
-});
-
 AOS.init({
     duration: 1200,
 });
@@ -43,7 +32,7 @@ glowTexts.forEach(text => {
 });
 
 let productosData = [];
-let carrito = JSON.parse(localStorage.getItem('talez_carrito')) || [];
+let carrito = JSON.parse(sessionStorage.getItem('talez_carrito')) || [];
 
 async function initDynamicStore() {
     try {
@@ -256,7 +245,6 @@ function renderProducts(categoria, subcategoria, marca) {
         const marClean = producto["MARCA"] ? producto["MARCA"].toString().trim() : "";
         const nombreImagen = producto["NOMBRE IMAGEN"].toString().trim();
         
-        // Lectura de la nueva columna TALLES
         const tallesRaw = producto["TALLES"] ? producto["TALLES"].toString().trim() : "";
         let selectorTallesHTML = '';
 
@@ -315,6 +303,34 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnCerrar = document.getElementById('cerrar-carrito');
     const iconosCarrito = document.querySelectorAll('.hm-icon-cart'); 
 
+    // Control del Menú Móvil (Hamburguesa)
+    const menuMovil = document.querySelector('.header-menu-movil');
+    const iconMenu = document.querySelector('.icon-menu');
+    const menuClose = document.querySelector('.cerrar-menu');
+
+    if (iconMenu && menuMovil) {
+        iconMenu.addEventListener('click', (e) => {
+            e.stopPropagation();
+            menuMovil.classList.add('active');
+        });
+    }
+
+    if (menuClose && menuMovil) {
+        menuClose.addEventListener('click', (e) => {
+            e.stopPropagation();
+            menuMovil.classList.remove('active');
+        });
+    }
+
+    // Cerrar menú móvil al hacer clic fuera de él
+    document.addEventListener('click', (e) => {
+        if (menuMovil && menuMovil.classList.contains('active')) {
+            if (!menuMovil.contains(e.target) && !iconMenu.contains(e.target)) {
+                menuMovil.classList.remove('active');
+            }
+        }
+    });
+
     function abrirCarrito() {
         sidebar.classList.add('activo');
         overlay.classList.add('activo');
@@ -325,7 +341,6 @@ document.addEventListener("DOMContentLoaded", () => {
         sidebar.classList.remove('activo');
         overlay.classList.remove('activo');
         
-        // Resetear a la vista del carrito al cerrar
         const viewItems = document.getElementById('carrito-view-items');
         const viewCheckout = document.getElementById('carrito-view-checkout');
         const carritoTitulo = document.getElementById('carrito-titulo');
@@ -348,7 +363,6 @@ document.addEventListener("DOMContentLoaded", () => {
     if (btnCerrar) btnCerrar.addEventListener('click', cerrarCarrito);
     if (overlay) overlay.addEventListener('click', cerrarCarrito);
 
-    // Capturar clics en "Agregar al Carrito" contemplando el talle seleccionado
     const contenedor = document.getElementById('contenedor-productos');
     if (contenedor) {
         contenedor.addEventListener('click', (e) => {
@@ -379,7 +393,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Navegación dentro del Sidebar: Ir al Checkout (Formulario de pago/envío)
     const btnIrCheckout = document.getElementById('btn-ir-checkout');
     const btnVolverCarrito = document.getElementById('btn-volver-carrito');
     const viewItems = document.getElementById('carrito-view-items');
@@ -420,7 +433,8 @@ function agregarAlCarrito(producto) {
         carrito.push(producto);
     }
     
-    localStorage.setItem('talez_carrito', JSON.stringify(carrito));
+    // Guardar en sessionStorage para que se resetee al cerrar o actualizar la pestaña
+    sessionStorage.setItem('talez_carrito', JSON.stringify(carrito));
     actualizarContadorCarrito();
     
     const sidebar = document.getElementById('carrito-sidebar');
@@ -498,7 +512,7 @@ window.cambiarCantidad = function(codigo, delta) {
         if (carrito[index].cantidad <= 0) {
             carrito.splice(index, 1);
         }
-        localStorage.setItem('talez_carrito', JSON.stringify(carrito));
+        sessionStorage.setItem('talez_carrito', JSON.stringify(carrito));
         actualizarContadorCarrito();
         renderizarContenidoCarrito();
     }
@@ -506,12 +520,11 @@ window.cambiarCantidad = function(codigo, delta) {
 
 window.eliminarDelCarrito = function(codigo) {
     carrito = carrito.filter(item => item.codigo !== codigo);
-    localStorage.setItem('talez_carrito', JSON.stringify(carrito));
+    sessionStorage.setItem('talez_carrito', JSON.stringify(carrito));
     actualizarContadorCarrito();
     renderizarContenidoCarrito();
 };
 
-// Finalizar compra y armar mensaje automático para WhatsApp con datos del formulario
 document.getElementById('btn-enviar-whatsapp')?.addEventListener('click', () => {
     if (carrito.length === 0) {
         alert('Tu carrito está vacío.');
@@ -521,17 +534,19 @@ document.getElementById('btn-enviar-whatsapp')?.addEventListener('click', () => 
     const nombreInput = document.getElementById('cliente-nombre');
     const nombre = nombreInput ? nombreInput.value.trim() : "";
     
-    // 2. Entrega fija / predeterminada con la leyenda solicitada
     const envio = "A coordinar (Sus productos estarán listos a partir de los 10 días posteriores a recibido el pago)";
     
-    // 1. Opciones de pago (Efectivo o Billetera virtual / Transferencia)
     const selectPago = document.getElementById('cliente-pago');
     const tipoPagoSeleccionado = selectPago ? selectPago.value : "Efectivo";
     
-    // Si tienes un input opcional donde el usuario escribe el alias o si seleccionó transferencia, lo integramos:
-    let pago = tipoPagoSeleccionado;
+    let pago = "";
+    let esBilleteraVirtual = false;
+
     if (tipoPagoSeleccionado.toLowerCase().includes('billetera') || tipoPagoSeleccionado.toLowerCase().includes('transferencia')) {
-        pago = "Billetera Virtual / Transferencia (Alias: TALEZ.PAGOS o a coordinar)";
+        pago = "Billetera Virtual / Transferencia (Alias: TALEZ.PAGOS)";
+        esBilleteraVirtual = true;
+    } else {
+        pago = "Efectivo";
     }
 
     if (!nombre) {
@@ -540,11 +555,11 @@ document.getElementById('btn-enviar-whatsapp')?.addEventListener('click', () => 
         return;
     }
 
-    let mensaje = `*¡Hola! Nuevo Pedido Web*%0A%0A`;
-    mensaje += `👤 *Cliente:* ${nombre}%0A`;
-    mensaje += `📦 *Entrega:* ${envio}%0A`;
-    mensaje += `💳 *Pago:* ${pago}%0A%0A`;
-    mensaje += `*Detalle de productos:*%0A`;
+    let mensaje = `*¡Hola! Nuevo Pedido Web*%0A`;
+    mensaje += `*Cliente:* ${nombre}%0A`;
+    mensaje += `*Entrega:* ${envio}%0A`;
+    mensaje += `Pago: *${pago}*%0A`;
+    mensaje += `Detalle de productos:%0A`;
 
     let totalGeneral = 0;
 
@@ -559,19 +574,30 @@ document.getElementById('btn-enviar-whatsapp')?.addEventListener('click', () => 
         const subtotal = precioLimpio * item.cantidad;
         if (precioLimpio > 0) totalGeneral += subtotal;
 
-        mensaje += `• *${item.nombre}* 
-        - Cantidad: ${item.cantidad} 
-        - ID: ${item.codigo}%0A`;
+        mensaje += `• *${item.nombre}*%0A`;
+        if (item.talle && item.talle !== 'Único') {
+            mensaje += `- Talle: *${item.talle}*%0A`;
+        }
+        mensaje += `- Cantidad: *${item.cantidad}*%0A`;
+        mensaje += `- ID: *${item.codigo}*%0A`;
     });
 
     if (totalGeneral > 0) {
-        mensaje += `%0A💰 *Total Estimado:* $${totalGeneral.toLocaleString('es-AR')}`;
+        mensaje += `*Total Estimado: $${totalGeneral.toLocaleString('es-AR')}*%0A`;
     }
 
-    mensaje += `%0A%0A¡Aguardo confirmación para coordinar!`;
+    mensaje += `¡Aguardo confirmación para coordinar la entrega!`;
 
     const numeroWhatsApp = "5491150063535"; 
     const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
+
+    if (esBilleteraVirtual) {
+        const confirmarPago = confirm(`⚠️ MÉTODO DE PAGO: Billetera Virtual / Transferencia\n\nAlias: TALEZ.PAGOS\nTotal: $${totalGeneral.toLocaleString('es-AR')}\n\n1. Recordá enviar el comprobante de la operación por WhatsApp.\n2. Hacé clic en "Aceptar" para abrir tu billetera virtual (o pasarela de pago) y luego continuar con el envío del pedido.`);
+        
+        if (confirmarPago) {
+            window.open("https://link.mercadopago.com.ar/talez", "_blank"); 
+        }
+    }
 
     window.open(urlWhatsApp, '_blank');
 });
