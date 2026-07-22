@@ -53,27 +53,66 @@
             </ul>
         </div>
     <!-- Carrito Lateral (Drawer) -->
-            <div id="carrito-sidebar" class="carrito-sidebar">
-                    <div class="carrito-header">
-                        <h3>Tu Carrito de Compras</h3>
-                        <button id="cerrar-carrito" class="btn-cerrar">&times;</button>
-                    </div>
-                    
-                    <div id="carrito-items-container" class="carrito-body">
-                        <!-- Aquí se cargan dinámicamente los productos -->
-                        <p class="carrito-vacio">Tu carrito está vacío</p>
-                    </div>
-                    
-                    <div class="carrito-footer">
-                        <div class="carrito-total">
-                            <span>Total estimado:</span>
-                            <strong id="carrito-total-monto">$0.00</strong>
-                        </div>
-                        <button id="btn-finalizar-compra" class="hm-btn btn-primary uppercase w-full">
-                            REALIZAR PEDIDO POR WHATSAPP
-                        </button>
-                    </div>
+<div id="carrito-sidebar" class="carrito-sidebar">
+        <div class="carrito-header">
+            <h3 id="carrito-titulo">Tu Carrito de Compras</h3>
+            <button id="cerrar-carrito" class="btn-cerrar">&times;</button>
+        </div>
+    
+    <!-- PASO 1: Listado de productos -->
+        <div id="carrito-view-items" class="carrito-view active">
+            <div id="carrito-items-container" class="carrito-body">
+                <p class="carrito-vacio">Tu carrito está vacío</p>
             </div>
+            <div class="carrito-footer">
+                <div class="carrito-total">
+                    <span>Total estimado:</span>
+                    <strong id="carrito-total-monto">$0.00</strong>
+                </div>
+                <button id="btn-ir-checkout" class="hm-btn btn-primary uppercase w-full">
+                    CONTINUAR COMPRA
+                </button>
+            </div>
+        </div>
+
+    <!-- PASO 2: Formulario de Datos y Medios de Pago -->
+        <div id="carrito-view-checkout" style="display: none;">
+            <h3>Finalizar Pedido</h3>
+            
+            <!-- Input de Nombre -->
+            <div class="form-group" style="margin-bottom: 12px;">
+                <label for="cliente-nombre" style="font-size: 0.85rem; display: block; margin-bottom: 4px;">Nombre y Apellido:</label>
+                <input type="text" id="cliente-nombre" placeholder="Ej: Juan Pérez" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+            </div>
+
+            <!-- Información de Envío (Bloque informativo o select fijo) -->
+            <div class="form-group" style="margin-bottom: 12px;">
+                <label style="font-size: 0.85rem; display: block; margin-bottom: 4px;">Método de Entrega:</label>
+                <p style="font-size: 0.8rem; background: var(--bg-card, #f4f4f4); padding: 8px; border-radius: 4px; border: 1px solid var(--border-color, #ddd); color: var(--text-dark);">
+                    🚚 <strong>A coordinar</strong><br>
+                    <span style="font-size: 0.75rem; color: var(--text-muted, #666);">Sus productos estarán listos a partir de los 10 días posteriores a recibido el pago.</span>
+                </p>
+            </div>
+
+            <!-- Selección de Medio de Pago -->
+            <div class="form-group" style="margin-bottom: 16px;">
+                <label for="cliente-pago" style="font-size: 0.85rem; display: block; margin-bottom: 4px;">Medio de Pago:</label>
+                <select id="cliente-pago" style="width: 100%; padding: 8px; border-radius: 4px; border: 1px solid #ccc;">
+                    <option value="Efectivo">Efectivo</option>
+                    <option value="Billetera Virtual / Transferencia">Billetera Virtual / Transferencia (por Alias)</option>
+                </select>
+            </div>
+
+            <!-- Botón de Envío -->
+            <button id="btn-enviar-whatsapp" class="hm-btn btn-primary uppercase" style="width: 100%; padding: 10px; background: #25d366; color: #fff; border: none; border-radius: 4px; font-weight: bold; cursor: pointer;">
+                Enviar pedido por WhatsApp 📱
+            </button>
+            
+            <button id="btn-volver-carrito" class="hm-btn" style="width: 100%; margin-top: 8px; background: transparent; border: 1px solid #ccc; padding: 8px; cursor: pointer;">
+                Volver al Carrito
+            </button>
+        </div>
+</div>
 
     <!-- Fondo oscuro de bloqueo (Overlay) -->
         <div id="carrito-overlay" class="carrito-overlay"></div>

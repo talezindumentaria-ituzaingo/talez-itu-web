@@ -324,6 +324,18 @@ document.addEventListener("DOMContentLoaded", () => {
     function cerrarCarrito() {
         sidebar.classList.remove('activo');
         overlay.classList.remove('activo');
+        
+        // Resetear a la vista del carrito al cerrar
+        const viewItems = document.getElementById('carrito-view-items');
+        const viewCheckout = document.getElementById('carrito-view-checkout');
+        const carritoTitulo = document.getElementById('carrito-titulo');
+        if (viewItems && viewCheckout) {
+            viewCheckout.style.display = 'none';
+            viewItems.style.display = 'flex';
+            viewItems.style.flexDirection = 'column';
+            viewItems.style.flex = '1';
+            if (carritoTitulo) carritoTitulo.textContent = 'Tu Carrito de Compras';
+        }
     }
 
     iconosCarrito.forEach(icono => {
@@ -364,6 +376,37 @@ document.addEventListener("DOMContentLoaded", () => {
                 
                 agregarAlCarrito(productoObj);
             }
+        });
+    }
+
+    // Navegación dentro del Sidebar: Ir al Checkout (Formulario de pago/envío)
+    const btnIrCheckout = document.getElementById('btn-ir-checkout');
+    const btnVolverCarrito = document.getElementById('btn-volver-carrito');
+    const viewItems = document.getElementById('carrito-view-items');
+    const viewCheckout = document.getElementById('carrito-view-checkout');
+    const carritoTitulo = document.getElementById('carrito-titulo');
+
+    if (btnIrCheckout) {
+        btnIrCheckout.addEventListener('click', () => {
+            if (carrito.length === 0) {
+                alert('Tu carrito está vacío.');
+                return;
+            }
+            viewItems.style.display = 'none';
+            viewCheckout.style.display = 'flex';
+            viewCheckout.style.flexDirection = 'column';
+            viewCheckout.style.flex = '1';
+            if (carritoTitulo) carritoTitulo.textContent = 'Finalizar Pedido';
+        });
+    }
+
+    if (btnVolverCarrito) {
+        btnVolverCarrito.addEventListener('click', () => {
+            viewCheckout.style.display = 'none';
+            viewItems.style.display = 'flex';
+            viewItems.style.flexDirection = 'column';
+            viewItems.style.flex = '1';
+            if (carritoTitulo) carritoTitulo.textContent = 'Tu Carrito de Compras';
         });
     }
 });
@@ -468,19 +511,64 @@ window.eliminarDelCarrito = function(codigo) {
     renderizarContenidoCarrito();
 };
 
-document.getElementById('btn-finalizar-compra')?.addEventListener('click', () => {
+// Finalizar compra y armar mensaje automático para WhatsApp con datos del formulario
+document.getElementById('btn-enviar-whatsapp')?.addEventListener('click', () => {
     if (carrito.length === 0) {
         alert('Tu carrito está vacío.');
         return;
     }
 
-    let mensaje = "¡Hola! Quisiera realizar el siguiente pedido:%0A%0A";
+    const nombreInput = document.getElementById('cliente-nombre');
+    const nombre = nombreInput ? nombreInput.value.trim() : "";
+    
+    // 2. Entrega fija / predeterminada con la leyenda solicitada
+    const envio = "A coordinar (Sus productos estarán listos a partir de los 10 días posteriores a recibido el pago)";
+    
+    // 1. Opciones de pago (Efectivo o Billetera virtual / Transferencia)
+    const selectPago = document.getElementById('cliente-pago');
+    const tipoPagoSeleccionado = selectPago ? selectPago.value : "Efectivo";
+    
+    // Si tienes un input opcional donde el usuario escribe el alias o si seleccionó transferencia, lo integramos:
+    let pago = tipoPagoSeleccionado;
+    if (tipoPagoSeleccionado.toLowerCase().includes('billetera') || tipoPagoSeleccionado.toLowerCase().includes('transferencia')) {
+        pago = "Billetera Virtual / Transferencia (Alias: TALEZ.PAGOS o a coordinar)";
+    }
+
+    if (!nombre) {
+        alert('Por favor, ingresa tu nombre y apellido.');
+        if (nombreInput) nombreInput.focus();
+        return;
+    }
+
+    let mensaje = `*¡Hola! Nuevo Pedido Web*%0A%0A`;
+    mensaje += `👤 *Cliente:* ${nombre}%0A`;
+    mensaje += `📦 *Entrega:* ${envio}%0A`;
+    mensaje += `💳 *Pago:* ${pago}%0A%0A`;
+    mensaje += `*Detalle de productos:*%0A`;
+
+    let totalGeneral = 0;
 
     carrito.forEach(item => {
-        mensaje += `• *${item.nombre}* x ${item.cantidad} - ID: ${item.codigo}%0A`;
+        let precioLimpio = 0;
+        if (typeof item.precio === 'string' && item.precio !== 'Consultar') {
+            precioLimpio = parseFloat(item.precio.replace(/[^0-9,.]/g, '').replace(',', '.')) || 0;
+        } else if (typeof item.precio === 'number') {
+            precioLimpio = item.precio;
+        }
+
+        const subtotal = precioLimpio * item.cantidad;
+        if (precioLimpio > 0) totalGeneral += subtotal;
+
+        mensaje += `• *${item.nombre}* 
+        - Cantidad: ${item.cantidad} 
+        - ID: ${item.codigo}%0A`;
     });
 
-    mensaje += `%0A¡Espero su respuesta para coordinar el pago y envío!`;
+    if (totalGeneral > 0) {
+        mensaje += `%0A💰 *Total Estimado:* $${totalGeneral.toLocaleString('es-AR')}`;
+    }
+
+    mensaje += `%0A%0A¡Aguardo confirmación para coordinar!`;
 
     const numeroWhatsApp = "5491150063535"; 
     const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
