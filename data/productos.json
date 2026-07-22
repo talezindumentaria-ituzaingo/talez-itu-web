@@ -415,7 +415,7 @@
   },
   {
     "ID PROD": "RDM001-0001",
-    "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER varios colores Talles S, M, L, XL y XXL",
+    "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER color Amarillo Talles S, M, L, XL y XXL",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "NIKE",
@@ -424,7 +424,7 @@
   },
   {
     "ID PROD": "RDM001-0002",
-    "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER color Amarillo Talles S, M, L, XL y XXL",
+    "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER color Negro Talles S, M, L, XL y XXL",
     "CATEGORIA": "",
     "SUB CATEGORIA": "",
     "MARCA": "",
@@ -433,15 +433,6 @@
   },
   {
     "ID PROD": "RDM001-0003",
-    "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER color Negro Talles S, M, L, XL y XXL",
-    "CATEGORIA": "",
-    "SUB CATEGORIA": "",
-    "MARCA": "",
-    "PRECIO UNITARIO": "",
-    "NOMBRE IMAGEN": ""
-  },
-  {
-    "ID PROD": "RDM001-0004",
     "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER color Verde Talles S, M, L, XL y XXL",
     "CATEGORIA": "",
     "SUB CATEGORIA": "",
@@ -450,7 +441,7 @@
     "NOMBRE IMAGEN": ""
   },
   {
-    "ID PROD": "RDM001-0005",
+    "ID PROD": "RDM001-0004",
     "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER color Salmón Talles S, M, L, XL y XXL",
     "CATEGORIA": "",
     "SUB CATEGORIA": "",
@@ -459,7 +450,7 @@
     "NOMBRE IMAGEN": ""
   },
   {
-    "ID PROD": "RDM001-0006",
+    "ID PROD": "RDM001-0005",
     "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER color Blanco Talles S, M, L, XL y XXL",
     "CATEGORIA": "",
     "SUB CATEGORIA": "",
@@ -468,7 +459,7 @@
     "NOMBRE IMAGEN": ""
   },
   {
-    "ID PROD": "RDM001-0007",
+    "ID PROD": "RDM001-0006",
     "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER color Lila Oscuro Talles S, M, L, XL y XXL",
     "CATEGORIA": "",
     "SUB CATEGORIA": "",
@@ -477,7 +468,7 @@
     "NOMBRE IMAGEN": ""
   },
   {
-    "ID PROD": "RDM001-0008",
+    "ID PROD": "RDM001-0007",
     "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER color Lila claro Talles S, M, L, XL y XXL",
     "CATEGORIA": "",
     "SUB CATEGORIA": "",
@@ -486,7 +477,7 @@
     "NOMBRE IMAGEN": ""
   },
   {
-    "ID PROD": "RDM001-0009",
+    "ID PROD": "RDM001-0008",
     "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER color Uva Talles S, M, L, XL y XXL",
     "CATEGORIA": "",
     "SUB CATEGORIA": "",
@@ -495,7 +486,7 @@
     "NOMBRE IMAGEN": ""
   },
   {
-    "ID PROD": "RDM001-0010",
+    "ID PROD": "RDM001-0009",
     "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER color Salmón Oscuro Talles S, M, L, XL y XXL",
     "CATEGORIA": "",
     "SUB CATEGORIA": "",
@@ -504,7 +495,7 @@
     "NOMBRE IMAGEN": ""
   },
   {
-    "ID PROD": "RDM001-0011",
+    "ID PROD": "RDM001-0010",
     "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER color Negro Talles S, M, L, XL y XXL",
     "CATEGORIA": "",
     "SUB CATEGORIA": "",
@@ -513,7 +504,7 @@
     "NOMBRE IMAGEN": ""
   },
   {
-    "ID PROD": "RDM001-0012",
+    "ID PROD": "RDM001-0011",
     "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER color Fucsia Talles S, M, L, XL y XXL",
     "CATEGORIA": "",
     "SUB CATEGORIA": "",
@@ -522,7 +513,7 @@
     "NOMBRE IMAGEN": ""
   },
   {
-    "ID PROD": "RDM001-0013",
+    "ID PROD": "RDM001-0012",
     "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER color Gris Talles S, M, L, XL y XXL",
     "CATEGORIA": "",
     "SUB CATEGORIA": "",
@@ -531,7 +522,7 @@
     "NOMBRE IMAGEN": ""
   },
   {
-    "ID PROD": "RDM001-0014",
+    "ID PROD": "RDM001-0013",
     "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER color Durazno Talles S, M, L, XL y XXL",
     "CATEGORIA": "",
     "SUB CATEGORIA": "",
