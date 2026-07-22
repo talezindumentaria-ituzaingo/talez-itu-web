@@ -161,6 +161,7 @@ function renderProducts(categoria, marca) {
         const marClean = producto["MARCA"] ? producto["MARCA"].toString().trim() : "";
         const nombreImagen = producto["NOMBRE IMAGEN"].toString().trim();
         
+        // Armado blindado de la ruta respetando las carpetas de categoría y marca
         let rutaImagen = '';
         if (marClean !== "") {
             rutaImagen = `images/${catClean}/${marClean}/${nombreImagen}`;
@@ -172,7 +173,7 @@ function renderProducts(categoria, marca) {
             <div class="product-item ${claseAnim}" data-aos="fade-up" data-aos-duration="${delayAOS}">
                 <div class="p-portada">
                     <a href="#">
-                        <img src="${rutaImagen}" alt="${descripcion}" onerror="this.src='images/placeholder.jpg'">
+                        <img src="${rutaImagen}" alt="${descripcion}" onerror="console.warn('Ruta fallida:', '${rutaImagen}'); this.src='images/placeholder.jpg';">
                     </a>
                 </div>
                 <div class="p-info">
