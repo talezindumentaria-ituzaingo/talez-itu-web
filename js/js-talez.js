@@ -51,18 +51,30 @@ async function initDynamicStore() {
         
         setupTabs();
         
-        const activeMainTab = document.querySelector('.hm-tab-link.active');
+        const activeMainTab = document.querySelector('.hm-tab-link.active') || document.querySelector('.hm-tab-link');
         if (activeMainTab) {
             const targetId = activeMainTab.getAttribute('data-tab');
             const targetContainer = document.getElementById(targetId);
+            
+            document.querySelectorAll('.hm-tab-link').forEach(t => t.classList.remove('active'));
+            activeMainTab.classList.add('active');
+            
+            document.querySelectorAll('.hm-sub-tabs').forEach(c => c.classList.remove('active'));
+            
             if (targetContainer) {
+                targetContainer.classList.add('active');
+                const subLinks = targetContainer.querySelectorAll('.hm-sub-tab-link');
+                subLinks.forEach(sl => sl.classList.remove('active'));
+                
                 const firstSubTab = targetContainer.querySelector('.hm-sub-tab-link');
                 if (firstSubTab) {
                     firstSubTab.classList.add('active');
-                    renderProducts(firstSubTab.getAttribute('data-cat'), firstSubTab.getAttribute('data-marca'));
+                    renderProducts(firstSubTab.getAttribute('data-cat') || "", firstSubTab.getAttribute('data-subcat') || "", firstSubTab.getAttribute('data-marca') || "");
                 } else {
-                    renderProducts('', '');
+                    renderProducts('', '', '');
                 }
+            } else {
+                renderProducts('', '', '');
             }
         }
     } catch (error) {
@@ -77,12 +89,13 @@ function setupTabs() {
     
     mainTabs.forEach(tab => {
         tab.addEventListener('click', (e) => {
+            e.preventDefault();
             mainTabs.forEach(t => t.classList.remove('active'));
-            e.target.classList.add('active');
+            tab.classList.add('active');
             
             subTabsContainers.forEach(container => container.classList.remove('active'));
             
-            const targetId = e.target.getAttribute('data-tab');
+            const targetId = tab.getAttribute('data-tab');
             const targetContainer = document.getElementById(targetId);
             
             if (targetContainer) {
@@ -94,42 +107,109 @@ function setupTabs() {
                 const firstSubTab = targetContainer.querySelector('.hm-sub-tab-link');
                 if (firstSubTab) {
                     firstSubTab.classList.add('active');
-                    renderProducts(firstSubTab.getAttribute('data-cat'), firstSubTab.getAttribute('data-marca'));
+                    renderProducts(firstSubTab.getAttribute('data-cat') || "", firstSubTab.getAttribute('data-subcat') || "", firstSubTab.getAttribute('data-marca') || "");
                 } else {
-                    renderProducts('', '');
+                    renderProducts('', '', '');
                 }
             } else {
-                renderProducts('', '');
+                renderProducts('', '', '');
             }
         });
     });
 
     subTabsLinks.forEach(subTab => {
         subTab.addEventListener('click', (e) => {
-            const parentUl = e.target.closest('.hm-sub-tabs');
-            const siblings = parentUl.querySelectorAll('.hm-sub-tab-link');
-            siblings.forEach(s => s.classList.remove('active'));
-            e.target.classList.add('active');
+            e.preventDefault();
+            const parentUl = subTab.closest('.hm-sub-tabs');
+            if (parentUl) {
+                const siblings = parentUl.querySelectorAll('.hm-sub-tab-link');
+                siblings.forEach(s => s.classList.remove('active'));
+            }
+            subTab.classList.add('active');
             
-            const cat = e.target.getAttribute('data-cat');
-            const marca = e.target.getAttribute('data-marca');
-            renderProducts(cat, marca);
+            const cat = subTab.getAttribute('data-cat') || "";
+            const subcat = subTab.getAttribute('data-subcat') || "";
+            const marca = subTab.getAttribute('data-marca') || "";
+            renderProducts(cat, subcat, marca);
         });
     });
 
     const categoryTriggers = document.querySelectorAll('.cat-trigger');
     categoryTriggers.forEach(trigger => {
         trigger.addEventListener('click', (e) => {
+            e.preventDefault();
             const targetId = trigger.getAttribute('data-target');
             const correspondingTab = document.querySelector(`.hm-tab-link[data-tab="${targetId}"]`);
             if (correspondingTab) {
-                correspondingTab.click();
+                mainTabs.forEach(t => t.classList.remove('active'));
+                correspondingTab.classList.add('active');
+                
+                subTabsContainers.forEach(container => container.classList.remove('active'));
+                const targetContainer = document.getElementById(targetId);
+                
+                if (targetContainer) {
+                    targetContainer.classList.add('active');
+                    
+                    const subLinks = targetContainer.querySelectorAll('.hm-sub-tab-link');
+                    subLinks.forEach(sl => sl.classList.remove('active'));
+                    
+                    const firstSubTab = targetContainer.querySelector('.hm-sub-tab-link');
+                    if (firstSubTab) {
+                        firstSubTab.classList.add('active');
+                        renderProducts(firstSubTab.getAttribute('data-cat') || "", firstSubTab.getAttribute('data-subcat') || "", firstSubTab.getAttribute('data-marca') || "");
+                    } else {
+                        renderProducts('', '', '');
+                    }
+                }
+                
+                const seccionIndumentaria = document.getElementById('indumentaria') || document.querySelector('.hm-indumentaria');
+                if (seccionIndumentaria) {
+                    seccionIndumentaria.scrollIntoView({ behavior: 'smooth' });
+                }
+            }
+        });
+    });
+
+    const categoryTriggersGeneral = document.querySelectorAll('.cat-trigger-general');
+    categoryTriggersGeneral.forEach(trigger => {
+        trigger.addEventListener('click', (e) => {
+            e.preventDefault();
+            const targetId = trigger.getAttribute('data-target');
+            const correspondingTab = document.querySelector(`.hm-tab-link[data-tab="${targetId}"]`);
+            const categoriaGeneral = trigger.getAttribute('data-cat') || "";
+            
+            if (correspondingTab) {
+                mainTabs.forEach(t => t.classList.remove('active'));
+                correspondingTab.classList.add('active');
+                
+                subTabsContainers.forEach(container => container.classList.remove('active'));
+                const targetContainer = document.getElementById(targetId);
+                
+                if (targetContainer) {
+                    targetContainer.classList.add('active');
+                    const subLinks = targetContainer.querySelectorAll('.hm-sub-tab-link');
+                    subLinks.forEach(sl => sl.classList.remove('active'));
+                    
+                    const firstSubTab = targetContainer.querySelector('.hm-sub-tab-link');
+                    if (firstSubTab) {
+                        firstSubTab.classList.add('active');
+                    }
+                }
+            }
+            
+            if (categoriaGeneral !== "") {
+                renderProducts(categoriaGeneral, '', '');
+            }
+
+            const seccionIndumentaria = document.getElementById('indumentaria') || document.querySelector('.hm-indumentaria');
+            if (seccionIndumentaria) {
+                seccionIndumentaria.scrollIntoView({ behavior: 'smooth' });
             }
         });
     });
 }
 
-function renderProducts(categoria, marca) {
+function renderProducts(categoria, subcategoria, marca) {
     const contenedor = document.getElementById('contenedor-productos');
     if (!contenedor) return;
     
@@ -137,11 +217,24 @@ function renderProducts(categoria, marca) {
     
     const productosFiltrados = productosData.filter(p => {
         const catSheet = p["CATEGORIA"] ? p["CATEGORIA"].toString().trim().toUpperCase() : "";
+        const subcatSheet = p["SUB CATEGORIA"] ? p["SUB CATEGORIA"].toString().trim().toUpperCase() : "";
         const marSheet = p["MARCA"] ? p["MARCA"].toString().trim().toUpperCase() : "";
+        
         const catTarget = categoria ? categoria.toString().trim().toUpperCase() : "";
+        const subcatTarget = subcategoria ? subcategoria.toString().trim().toUpperCase() : "";
         const marTarget = marca ? marca.toString().trim().toUpperCase() : "";
         
-        return catSheet === catTarget && marSheet === marTarget;
+        let match = (catSheet === catTarget);
+        
+        if (subcatTarget !== "") {
+            match = match && (subcatSheet === subcatTarget);
+        }
+        
+        if (marTarget !== "") {
+            match = match && (marSheet === marTarget);
+        }
+        
+        return match;
     });
 
     const clasesAnimacion = ['card-left', 'card-center', 'card-right'];
@@ -161,7 +254,6 @@ function renderProducts(categoria, marca) {
         const marClean = producto["MARCA"] ? producto["MARCA"].toString().trim() : "";
         const nombreImagen = producto["NOMBRE IMAGEN"].toString().trim();
         
-        // Armado blindado de la ruta respetando las carpetas de categoría y marca
         let rutaImagen = '';
         if (marClean !== "") {
             rutaImagen = `images/${catClean}/${marClean}/${nombreImagen}`;
