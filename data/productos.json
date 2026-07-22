@@ -2,6 +2,7 @@
   {
     "ID PROD": "TH001-001",
     "DESCRIPCIÓN": "Camiseta térmica ADIDAS color AZUL talles S, M, L, XL, XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "ADIDAS",
@@ -11,6 +12,7 @@
   {
     "ID PROD": "TH001-002",
     "DESCRIPCIÓN": "Camiseta térmica ADIDAS color BORDO talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "ADIDAS",
@@ -20,6 +22,7 @@
   {
     "ID PROD": "TH001-003",
     "DESCRIPCIÓN": "Camiseta térmica ADIDAS color BLANCA talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "ADIDAS",
@@ -29,6 +32,7 @@
   {
     "ID PROD": "TH001-004",
     "DESCRIPCIÓN": "Camiseta térmica ADIDAS color PETRÓLEO talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "ADIDAS",
@@ -38,6 +42,7 @@
   {
     "ID PROD": "TH001-005",
     "DESCRIPCIÓN": "Camiseta térmica ADIDAS color NEGRA talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "ADIDAS",
@@ -47,6 +52,7 @@
   {
     "ID PROD": "TH002-001",
     "DESCRIPCIÓN": "Camiseta térmica NIKE color AZUL talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "NIKE",
@@ -56,6 +62,7 @@
   {
     "ID PROD": "TH002-002",
     "DESCRIPCIÓN": "Camiseta térmica NIKE color BLANCA talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "NIKE",
@@ -65,6 +72,7 @@
   {
     "ID PROD": "TH002-003",
     "DESCRIPCIÓN": "Camiseta térmica NIKE color BORDO talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "NIKE",
@@ -74,6 +82,7 @@
   {
     "ID PROD": "TH002-004",
     "DESCRIPCIÓN": "Camiseta térmica NIKE color NEGRA talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "NIKE",
@@ -83,6 +92,7 @@
   {
     "ID PROD": "TH002-005",
     "DESCRIPCIÓN": "Camiseta térmica NIKE color PETRÓLEO talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "NIKE",
@@ -92,6 +102,7 @@
   {
     "ID PROD": "TH003-001",
     "DESCRIPCIÓN": "Camiseta térmica UNDER ARMOUR color AZUL FRANCIA talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "UNDER ARMOUR",
@@ -101,6 +112,7 @@
   {
     "ID PROD": "TH003-002",
     "DESCRIPCIÓN": "Camiseta térmica UNDER ARMOUR color BLANCA talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "UNDER ARMOUR",
@@ -110,6 +122,7 @@
   {
     "ID PROD": "TH003-003",
     "DESCRIPCIÓN": "Camiseta térmica UNDER ARMOUR color BORDO talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "UNDER ARMOUR",
@@ -119,6 +132,7 @@
   {
     "ID PROD": "TH003-004",
     "DESCRIPCIÓN": "Camiseta térmica UNDER ARMOUR color NEGRO talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "UNDER ARMOUR",
@@ -128,6 +142,7 @@
   {
     "ID PROD": "TH003-005",
     "DESCRIPCIÓN": "Camiseta térmica UNDER ARMOUR color PETRÓLEO talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "UNDER ARMOUR",
@@ -137,6 +152,7 @@
   {
     "ID PROD": "TM001-001",
     "DESCRIPCIÓN": "Camiseta térmica MARMELL color AZUL OSCURO talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
@@ -146,6 +162,7 @@
   {
     "ID PROD": "TM001-002",
     "DESCRIPCIÓN": "Camiseta térmica MARMELL color VERDE GASPEADO talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
@@ -155,6 +172,7 @@
   {
     "ID PROD": "TM001-003",
     "DESCRIPCIÓN": "Camiseta térmica MARMELL color BEIGE talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
@@ -164,6 +182,7 @@
   {
     "ID PROD": "TM001-004",
     "DESCRIPCIÓN": "Camiseta térmica MARMELL color GRIS OSCURO talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
@@ -173,6 +192,7 @@
   {
     "ID PROD": "TM001-005",
     "DESCRIPCIÓN": "Camiseta térmica MARMELL color PETRÓLEO talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
@@ -182,6 +202,7 @@
   {
     "ID PROD": "TM001-006",
     "DESCRIPCIÓN": "Camiseta térmica MARMELL color GRIS CLARO talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
@@ -191,6 +212,7 @@
   {
     "ID PROD": "TM001-007",
     "DESCRIPCIÓN": "Camiseta térmica MARMELL color VERDE talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
@@ -200,6 +222,7 @@
   {
     "ID PROD": "TM001-008",
     "DESCRIPCIÓN": "Camiseta térmica MARMELL color ARENA talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
@@ -209,6 +232,7 @@
   {
     "ID PROD": "TM001-009",
     "DESCRIPCIÓN": "Camiseta térmica MARMELL color NEGRO talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
@@ -218,6 +242,7 @@
   {
     "ID PROD": "TM001-010",
     "DESCRIPCIÓN": "Camiseta térmica MARMELL color ROSA talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
@@ -227,6 +252,7 @@
   {
     "ID PROD": "TM001-011",
     "DESCRIPCIÓN": "Camiseta térmica MARMELL color LILA talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
@@ -236,6 +262,7 @@
   {
     "ID PROD": "TM001-012",
     "DESCRIPCIÓN": "Camiseta térmica MARMELL color GRIS GASPEADO talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
@@ -245,6 +272,7 @@
   {
     "ID PROD": "TM001-013",
     "DESCRIPCIÓN": "Camiseta térmica MARMELL color CELESTE GASPEADO talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
@@ -254,6 +282,7 @@
   {
     "ID PROD": "RDH001-0001",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas NIKE varios colores Talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "NIKE",
@@ -263,6 +292,7 @@
   {
     "ID PROD": "RDH001-0002",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas NIKE color AZUL MARINO Talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "NIKE",
@@ -272,6 +302,7 @@
   {
     "ID PROD": "RDH001-0003",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas NIKE color BLANCA Talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "NIKE",
@@ -281,6 +312,7 @@
   {
     "ID PROD": "RDH001-0004",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas NIKE color GRIS Talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "NIKE",
@@ -290,6 +322,7 @@
   {
     "ID PROD": "RDH001-0005",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas NIKE color NEGRO Talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "NIKE",
@@ -299,6 +332,7 @@
   {
     "ID PROD": "RDH002-0001",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas PUMA varios colores Talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "PUMA",
@@ -308,6 +342,7 @@
   {
     "ID PROD": "RDH002-0002",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas PUMA color NEGRO Talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "PUMA",
@@ -317,6 +352,7 @@
   {
     "ID PROD": "RDH002-0003",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas PUMA color BLANCA Talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "PUMA",
@@ -326,6 +362,7 @@
   {
     "ID PROD": "RDH002-0004",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas PUMA color GRIS OSCURO Talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "PUMA",
@@ -335,6 +372,7 @@
   {
     "ID PROD": "RDH002-0005",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas PUMA color AZUL MARINO Talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "PUMA",
@@ -344,6 +382,7 @@
   {
     "ID PROD": "RDH003-0001",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas TALEZ varios colores Talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "TALEZ",
@@ -353,6 +392,7 @@
   {
     "ID PROD": "RDH003-0002",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas TALEZ color NEGRO Talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "TALEZ",
@@ -362,6 +402,7 @@
   {
     "ID PROD": "RDH003-0003",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas TALEZ color BLANCA Talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "TALEZ",
@@ -371,6 +412,7 @@
   {
     "ID PROD": "RDH003-0004",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas TALEZ color GRIS Talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "TALEZ",
@@ -380,6 +422,7 @@
   {
     "ID PROD": "RDH003-0005",
     "DESCRIPCIÓN": "Remeras Deportivas Importadas TALEZ color AZUL MARINO Talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "TALEZ",
@@ -389,6 +432,7 @@
   {
     "ID PROD": "PDH001-0001",
     "DESCRIPCIÓN": "Pantalon Deportivo LISO Hombre color NEGRO talles S, M, L, XL, XXL y XXXL",
+    "TALLES": "",
     "CATEGORIA": "PANTALONES DEPORTIVOS",
     "SUB CATEGORIA": "HOMBRE",
     "MARCA": "TALEZ",
@@ -398,6 +442,7 @@
   {
     "ID PROD": "PDH001-0002",
     "DESCRIPCIÓN": "Pantalón Deportivo LISO Hombre color GRIS Talles S, M, L, XL, XXL y XXXL",
+    "TALLES": "",
     "CATEGORIA": "PANTALONES DEPORTIVOS",
     "SUB CATEGORIA": "HOMBRE ",
     "MARCA": "TALEZ",
@@ -407,6 +452,7 @@
   {
     "ID PROD": "PDH001-0003",
     "DESCRIPCIÓN": "Pantalón Deportivo LISO Hombre color AZUL MARINO Talles S, M, L, XL, XXL y XXXL",
+    "TALLES": "",
     "CATEGORIA": "PANTALONES DEPORTIVOS",
     "SUB CATEGORIA": "HOMBRE ",
     "MARCA": "TALEZ",
@@ -416,6 +462,7 @@
   {
     "ID PROD": "RDM001-0001",
     "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER color Amarillo Talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
@@ -425,6 +472,7 @@
   {
     "ID PROD": "RDM001-0002",
     "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER color Negro Talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
@@ -434,6 +482,7 @@
   {
     "ID PROD": "RDM001-0003",
     "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER color Verde Talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
@@ -443,6 +492,7 @@
   {
     "ID PROD": "RDM001-0004",
     "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER color Salmón Talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
@@ -452,6 +502,7 @@
   {
     "ID PROD": "RDM001-0005",
     "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER color Blanco Talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
@@ -461,6 +512,7 @@
   {
     "ID PROD": "RDM001-0006",
     "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER color Lila Oscuro Talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
@@ -470,6 +522,7 @@
   {
     "ID PROD": "RDM001-0007",
     "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER color Lila claro Talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
@@ -479,6 +532,7 @@
   {
     "ID PROD": "RDM001-0008",
     "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER color Uva Talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
@@ -488,6 +542,7 @@
   {
     "ID PROD": "RDM001-0009",
     "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER color Salmón Oscuro Talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
@@ -497,6 +552,7 @@
   {
     "ID PROD": "RDM001-0010",
     "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER color Fucsia Talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
@@ -506,6 +562,7 @@
   {
     "ID PROD": "RDM001-0011",
     "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER color Gris Talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
@@ -515,6 +572,7 @@
   {
     "ID PROD": "RDM001-0012",
     "DESCRIPCIÓN": "Remeras Deportivas DRIFIT TALEZ MUJER color Durazno Talles S, M, L, XL y XXL",
+    "TALLES": "",
     "CATEGORIA": "REMERAS DEPORTIVAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
