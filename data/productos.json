@@ -402,7 +402,7 @@
     "SUB CATEGORIA": "HOMBRE ",
     "MARCA": "LISAS",
     "PRECIO UNITARIO": "$30000",
-    "NOMBRE IMAGEN": ""
+    "NOMBRE IMAGEN": "PDH001-0001.png"
   },
   {
     "ID PROD": "PDH001-0003",
@@ -411,6 +411,6 @@
     "SUB CATEGORIA": "HOMBRE ",
     "MARCA": "LISAS",
     "PRECIO UNITARIO": "$30000",
-    "NOMBRE IMAGEN": ""
+    "NOMBRE IMAGEN": "PDH001-0001.png"
   }
 ]
