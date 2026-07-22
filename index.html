@@ -52,6 +52,31 @@
                 <li><a href="#">Contacto</a></li>
             </ul>
         </div>
+    <!-- Carrito Lateral (Drawer) -->
+            <div id="carrito-sidebar" class="carrito-sidebar">
+                    <div class="carrito-header">
+                        <h3>Tu Carrito de Compras</h3>
+                        <button id="cerrar-carrito" class="btn-cerrar">&times;</button>
+                    </div>
+                    
+                    <div id="carrito-items-container" class="carrito-body">
+                        <!-- Aquí se cargan dinámicamente los productos -->
+                        <p class="carrito-vacio">Tu carrito está vacío</p>
+                    </div>
+                    
+                    <div class="carrito-footer">
+                        <div class="carrito-total">
+                            <span>Total estimado:</span>
+                            <strong id="carrito-total-monto">$0.00</strong>
+                        </div>
+                        <button id="btn-finalizar-compra" class="hm-btn btn-primary uppercase w-full">
+                            REALIZAR PEDIDO POR WHATSAPP
+                        </button>
+                    </div>
+            </div>
+
+    <!-- Fondo oscuro de bloqueo (Overlay) -->
+        <div id="carrito-overlay" class="carrito-overlay"></div>
 
         <div class="hm-page-block">
             <div class="container">
@@ -73,7 +98,7 @@
                     
                     <div class="grid-item card-center" data-aos="fade-up" data-aos-duration="1500">
                         <a href="#indumentaria" class="cat-trigger" data-target="cat-pantalones">
-                            <img src="images/PANTALONES DEPORTIVOS/TALEZ/PDH001-0001.png" alt="PANTALONES DEPORTIVOS">
+                            <img src="images/PANTALONES DEPORTIVOS/TALEZ/PDH001-0002.png" alt="PANTALONES DEPORTIVOS">
                             <div class="c-info">
                                 <h3>Pantalones Deportivos</h3>
                             </div>
@@ -82,9 +107,9 @@
                     
                     <div class="grid-item card-right" data-aos="fade-up" data-aos-duration="2000">
                         <a href="#indumentaria" class="cat-trigger" data-target="cat-remeras">
-                            <img src="images/REMERAS DEPORTIVAS/NIKE/RDH001-0001.png" alt="REMERAS DEPORTIVAS HOMBRE">
+                            <img src="images/REMERAS DEPORTIVAS/NIKE/RDH001-0001.png" alt="REMERAS DEPORTIVAS">
                             <div class="c-info">
-                                <h3>Remeras Deportivas HOMBRE</h3>
+                                <h3>Remeras Deportivas</h3>
                             </div>
                         </a>
                     </div>

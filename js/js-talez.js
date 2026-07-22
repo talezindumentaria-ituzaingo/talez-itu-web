@@ -43,6 +43,7 @@ glowTexts.forEach(text => {
 });
 
 let productosData = [];
+let carrito = JSON.parse(localStorage.getItem('talez_carrito')) || [];
 
 async function initDynamicStore() {
     try {
@@ -248,11 +249,28 @@ function renderProducts(categoria, subcategoria, marca) {
         const claseAnim = clasesAnimacion[index % 3];
         const delayAOS = 1000 + ((index % 3) * 500);
         
+        const codigoUnico = producto["ID PROD"] || producto["CÓDIGO"] || producto["ID"] || producto["SKU"] || "";
         const descripcion = producto["DESCRIPCIÓN"];
         const precio = producto["PRECIO UNITARIO"] || "Consultar";
         const catClean = producto["CATEGORIA"].toString().trim();
         const marClean = producto["MARCA"] ? producto["MARCA"].toString().trim() : "";
         const nombreImagen = producto["NOMBRE IMAGEN"].toString().trim();
+        
+        // Lectura de la nueva columna TALLES
+        const tallesRaw = producto["TALLES"] ? producto["TALLES"].toString().trim() : "";
+        let selectorTallesHTML = '';
+
+        if (tallesRaw !== "" && tallesRaw.toUpperCase() !== "ÚNICO" && tallesRaw.toUpperCase() !== "UNICO") {
+            const arrayTalles = tallesRaw.split(',').map(t => t.trim());
+            selectorTallesHTML = `
+                <div class="selector-talle-container" style="margin-bottom: 10px; text-align: left;">
+                    <label style="font-size: 0.8rem; font-weight: bold; display: block; margin-bottom: 4px; color: var(--text-muted);">Talle:</label>
+                    <select class="select-talle" style="width: 100%; padding: 6px; border-radius: 4px; border: 1px solid var(--border-color, #ccc); background: var(--bg-card); color: var(--text-dark);">
+                        ${arrayTalles.map(talle => `<option value="${talle}">${talle}</option>`).join('')}
+                    </select>
+                </div>
+            `;
+        }
         
         let rutaImagen = '';
         if (marClean !== "") {
@@ -271,9 +289,16 @@ function renderProducts(categoria, subcategoria, marca) {
                 <div class="p-info">
                     <a href="#"><h3>${descripcion}</h3></a>
                     <div class="precio">
-                        <span>$ ${precio}</span>
+                        <span>${precio}</span>
                     </div>
-                    <a href="#" class="hm-btn btn-primary uppercase">AGREGAR AL CARRITO</a>
+                    ${selectorTallesHTML}
+                    <button class="hm-btn btn-primary uppercase btn-agregar-carrito" 
+                        data-codigo="${codigoUnico}"
+                        data-nombre="${descripcion}"
+                        data-precio="${precio}"
+                        data-imagen="${rutaImagen}">
+                        AGREGAR AL CARRITO
+                    </button>
                 </div>
             </div>
         `;
@@ -281,4 +306,184 @@ function renderProducts(categoria, subcategoria, marca) {
     });
 }
 
-document.addEventListener("DOMContentLoaded", initDynamicStore);
+document.addEventListener("DOMContentLoaded", () => {
+    initDynamicStore();
+    actualizarContadorCarrito();
+    
+    const sidebar = document.getElementById('carrito-sidebar');
+    const overlay = document.getElementById('carrito-overlay');
+    const btnCerrar = document.getElementById('cerrar-carrito');
+    const iconosCarrito = document.querySelectorAll('.hm-icon-cart'); 
+
+    function abrirCarrito() {
+        sidebar.classList.add('activo');
+        overlay.classList.add('activo');
+        renderizarContenidoCarrito();
+    }
+
+    function cerrarCarrito() {
+        sidebar.classList.remove('activo');
+        overlay.classList.remove('activo');
+    }
+
+    iconosCarrito.forEach(icono => {
+        icono.addEventListener('click', (e) => {
+            e.preventDefault();
+            abrirCarrito();
+        });
+    });
+
+    if (btnCerrar) btnCerrar.addEventListener('click', cerrarCarrito);
+    if (overlay) overlay.addEventListener('click', cerrarCarrito);
+
+    // Capturar clics en "Agregar al Carrito" contemplando el talle seleccionado
+    const contenedor = document.getElementById('contenedor-productos');
+    if (contenedor) {
+        contenedor.addEventListener('click', (e) => {
+            if (e.target.classList.contains('btn-agregar-carrito')) {
+                e.preventDefault();
+                
+                const btn = e.target;
+                const codigoBase = btn.getAttribute('data-codigo');
+                
+                const cardInfo = btn.closest('.p-info');
+                const selectTalle = cardInfo ? cardInfo.querySelector('.select-talle') : null;
+                const talleSeleccionado = selectTalle ? selectTalle.value : 'Único';
+                
+                const codigoUnicoConTalle = `${codigoBase}-${talleSeleccionado}`;
+                const nombreConTalle = talleSeleccionado !== 'Único' ? `${btn.getAttribute('data-nombre')} (Talle: ${talleSeleccionado})` : btn.getAttribute('data-nombre');
+                
+                const productoObj = {
+                    codigo: codigoUnicoConTalle,
+                    nombre: nombreConTalle,
+                    precio: btn.getAttribute('data-precio'),
+                    imagen: btn.getAttribute('data-imagen'),
+                    talle: talleSeleccionado,
+                    cantidad: 1
+                };
+                
+                agregarAlCarrito(productoObj);
+            }
+        });
+    }
+});
+
+function agregarAlCarrito(producto) {
+    const index = carrito.findIndex(item => item.codigo === producto.codigo);
+    
+    if (index !== -1) {
+        carrito[index].cantidad += 1;
+    } else {
+        carrito.push(producto);
+    }
+    
+    localStorage.setItem('talez_carrito', JSON.stringify(carrito));
+    actualizarContadorCarrito();
+    
+    const sidebar = document.getElementById('carrito-sidebar');
+    const overlay = document.getElementById('carrito-overlay');
+    if (sidebar && overlay) {
+        sidebar.classList.add('activo');
+        overlay.classList.add('activo');
+        if (typeof renderizarContenidoCarrito === 'function') {
+            renderizarContenidoCarrito();
+        }
+    }
+}
+
+function actualizarContadorCarrito() {
+    const contadorSpan = document.querySelector('.hm-icon-cart span');
+    if (!contadorSpan) return;
+    
+    const totalItems = carrito.reduce((acumulador, item) => acumulador + item.cantidad, 0);
+    contadorSpan.textContent = totalItems;
+}
+
+window.renderizarContenidoCarrito = function() {
+    const contenedorItems = document.getElementById('carrito-items-container');
+    const montoTotalEl = document.getElementById('carrito-total-monto');
+    
+    if (!contenedorItems) return;
+
+    if (carrito.length === 0) {
+        contenedorItems.innerHTML = '<p class="carrito-vacio">Tu carrito está vacío</p>';
+        if (montoTotalEl) montoTotalEl.textContent = '$0.00';
+        return;
+    }
+
+    contenedorItems.innerHTML = '';
+    let totalGeneral = 0;
+
+    carrito.forEach(item => {
+        let precioLimpio = 0;
+        if (typeof item.precio === 'string' && item.precio !== 'Consultar') {
+            precioLimpio = parseFloat(item.precio.replace(/[^0-9,.]/g, '').replace(',', '.')) || 0;
+        } else if (typeof item.precio === 'number') {
+            precioLimpio = item.precio;
+        }
+
+        const subtotal = precioLimpio * item.cantidad;
+        if (precioLimpio > 0) totalGeneral += subtotal;
+
+        const itemHTML = `
+            <div class="carrito-item">
+                <img src="${item.imagen}" alt="${item.nombre}">
+                <div class="carrito-item-info">
+                    <h4>${item.nombre}</h4>
+                    <div class="carrito-item-precio">${item.precio} c/u</div>
+                    <div class="carrito-controles-cantidad">
+                        <button onclick="cambiarCantidad('${item.codigo}', -1)">-</button>
+                        <span>${item.cantidad}</span>
+                        <button onclick="cambiarCantidad('${item.codigo}', 1)">+</button>
+                        <button class="btn-eliminar-item" onclick="eliminarDelCarrito('${item.codigo}')" style="margin-left: auto;">Eliminar</button>
+                    </div>
+                </div>
+            </div>
+        `;
+        contenedorItems.innerHTML += itemHTML;
+    });
+
+    if (montoTotalEl) {
+        montoTotalEl.textContent = totalGeneral > 0 ? `$${totalGeneral.toLocaleString('es-AR')}` : 'Consultar';
+    }
+};
+
+window.cambiarCantidad = function(codigo, delta) {
+    const index = carrito.findIndex(item => item.codigo === codigo);
+    if (index !== -1) {
+        carrito[index].cantidad += delta;
+        if (carrito[index].cantidad <= 0) {
+            carrito.splice(index, 1);
+        }
+        localStorage.setItem('talez_carrito', JSON.stringify(carrito));
+        actualizarContadorCarrito();
+        renderizarContenidoCarrito();
+    }
+};
+
+window.eliminarDelCarrito = function(codigo) {
+    carrito = carrito.filter(item => item.codigo !== codigo);
+    localStorage.setItem('talez_carrito', JSON.stringify(carrito));
+    actualizarContadorCarrito();
+    renderizarContenidoCarrito();
+};
+
+document.getElementById('btn-finalizar-compra')?.addEventListener('click', () => {
+    if (carrito.length === 0) {
+        alert('Tu carrito está vacío.');
+        return;
+    }
+
+    let mensaje = "¡Hola! Quisiera realizar el siguiente pedido:%0A%0A";
+
+    carrito.forEach(item => {
+        mensaje += `• *${item.nombre}* x ${item.cantidad} - ID: ${item.codigo}%0A`;
+    });
+
+    mensaje += `%0A¡Espero su respuesta para coordinar el pago y envío!`;
+
+    const numeroWhatsApp = "5491150063535"; 
+    const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
+
+    window.open(urlWhatsApp, '_blank');
+});
