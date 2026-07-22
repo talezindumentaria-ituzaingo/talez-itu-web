@@ -176,7 +176,7 @@
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
-    "PRECIO UNITARIO": "$20.000",
+    "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "TM001-005.jpg"
   },
   {
@@ -185,7 +185,7 @@
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
-    "PRECIO UNITARIO": "$20.000",
+    "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "TM001-006.jpg"
   },
   {
@@ -407,7 +407,7 @@
   {
     "ID PROD": "PDH001-0003",
     "DESCRIPCIÓN": "Pantalón Deportivo LISO Hombre color AZUL MARINO Talles S, M, L, XL, XXL y XXXL",
-    "CATEGORIA": "",
+    "CATEGORIA": "PANTALÓN DEPORTIVO ",
     "SUB CATEGORIA": "",
     "MARCA": "",
     "PRECIO UNITARIO": "",
