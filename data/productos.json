@@ -221,7 +221,7 @@
     "CATEGORIA": "TERMICAS",
     "SUB CATEGORIA": "MUJER",
     "MARCA": "MARMELL",
-    "PRECIO UNITARIO": "$20.000",
+    "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "TM001-010.jpg"
   },
   {
@@ -399,7 +399,7 @@
     "ID PROD": "PDH001-0002",
     "DESCRIPCIÓN": "Pantalón Deportivo Liso Hombre color GRIS Talles S, M, L, XL, XXL y XXXL",
     "CATEGORIA": "PANTALÓN DEPORTIVO ",
-    "SUB CATEGORIA": "",
+    "SUB CATEGORIA": "HOMBRE ",
     "MARCA": "",
     "PRECIO UNITARIO": "",
     "NOMBRE IMAGEN": ""
