@@ -8,7 +8,7 @@
     "MARCA": "ADIDAS",
     "PRECIO UNITARIO": "$15000",
     "NOMBRE IMAGEN": "TH001-001.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "TH001-002",
@@ -19,7 +19,7 @@
     "MARCA": "ADIDAS",
     "PRECIO UNITARIO": "$15000",
     "NOMBRE IMAGEN": "TH001-002.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "TH001-003",
@@ -30,7 +30,7 @@
     "MARCA": "ADIDAS",
     "PRECIO UNITARIO": "$15000",
     "NOMBRE IMAGEN": "TH001-003.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "TH001-004",
@@ -41,7 +41,7 @@
     "MARCA": "ADIDAS",
     "PRECIO UNITARIO": "$15000",
     "NOMBRE IMAGEN": "TH001-004.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "TH001-005",
@@ -52,7 +52,7 @@
     "MARCA": "ADIDAS",
     "PRECIO UNITARIO": "$15000",
     "NOMBRE IMAGEN": "TH001-005.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "TH002-001",
@@ -63,7 +63,7 @@
     "MARCA": "NIKE",
     "PRECIO UNITARIO": "$15000",
     "NOMBRE IMAGEN": "TH002-001.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "TH002-002",
@@ -74,7 +74,7 @@
     "MARCA": "NIKE",
     "PRECIO UNITARIO": "$15000",
     "NOMBRE IMAGEN": "TH002-002.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "TH002-003",
@@ -85,7 +85,7 @@
     "MARCA": "NIKE",
     "PRECIO UNITARIO": "$15000",
     "NOMBRE IMAGEN": "TH002-003.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "TH002-004",
@@ -96,7 +96,7 @@
     "MARCA": "NIKE",
     "PRECIO UNITARIO": "$15000",
     "NOMBRE IMAGEN": "TH002-004.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "TH002-005",
@@ -107,7 +107,7 @@
     "MARCA": "NIKE",
     "PRECIO UNITARIO": "$15000",
     "NOMBRE IMAGEN": "TH002-005.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "TH003-001",
@@ -118,7 +118,7 @@
     "MARCA": "UNDER ARMOUR",
     "PRECIO UNITARIO": "$15000",
     "NOMBRE IMAGEN": "TH003-001.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "TH003-002",
@@ -129,7 +129,7 @@
     "MARCA": "UNDER ARMOUR",
     "PRECIO UNITARIO": "$15000",
     "NOMBRE IMAGEN": "TH003-002.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "TH003-003",
@@ -140,7 +140,7 @@
     "MARCA": "UNDER ARMOUR",
     "PRECIO UNITARIO": "$15000",
     "NOMBRE IMAGEN": "TH003-003.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "TH003-004",
@@ -151,7 +151,7 @@
     "MARCA": "UNDER ARMOUR",
     "PRECIO UNITARIO": "$15000",
     "NOMBRE IMAGEN": "TH003-004.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "TH003-005",
@@ -162,7 +162,7 @@
     "MARCA": "UNDER ARMOUR",
     "PRECIO UNITARIO": "$15000",
     "NOMBRE IMAGEN": "TH003-005.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "TM001-001",
@@ -173,7 +173,7 @@
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "TM001-001.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "TM001-002",
@@ -184,7 +184,7 @@
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "TM001-002.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "TM001-003",
@@ -195,7 +195,7 @@
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "TM001-003.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "TM001-004",
@@ -206,7 +206,7 @@
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "TM001-004.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "TM001-005",
@@ -217,7 +217,7 @@
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "TM001-005.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "TM001-006",
@@ -228,7 +228,7 @@
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "TM001-006.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "TM001-007",
@@ -239,7 +239,7 @@
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "TM001-007.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "TM001-008",
@@ -250,7 +250,7 @@
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "TM001-008.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "TM001-009",
@@ -261,7 +261,7 @@
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "TM001-009.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "TM001-010",
@@ -272,7 +272,7 @@
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "TM001-010.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "TM001-011",
@@ -283,7 +283,7 @@
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "TM001-011.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "TM001-012",
@@ -294,7 +294,7 @@
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "TM001-012.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "TM001-013",
@@ -305,7 +305,7 @@
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "TM001-013.jpg",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "RDH001-0001",
@@ -316,7 +316,7 @@
     "MARCA": "NIKE",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "RDH001-0001.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "RDH001-0002",
@@ -327,7 +327,7 @@
     "MARCA": "NIKE",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "RDH001-0002.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "RDH001-0003",
@@ -338,7 +338,7 @@
     "MARCA": "NIKE",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "RDH001-0003.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "RDH001-0004",
@@ -349,7 +349,7 @@
     "MARCA": "NIKE",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "RDH001-0004.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "RDH001-0005",
@@ -360,7 +360,7 @@
     "MARCA": "NIKE",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "RDH001-0005.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "RDH002-0001",
@@ -371,7 +371,7 @@
     "MARCA": "PUMA",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "RDH002-0001.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "RDH002-0002",
@@ -382,7 +382,7 @@
     "MARCA": "PUMA",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "RDH002-0002.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "RDH002-0003",
@@ -393,7 +393,7 @@
     "MARCA": "PUMA",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "RDH002-0003.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "RDH002-0004",
@@ -404,7 +404,7 @@
     "MARCA": "PUMA",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "RDH002-0004.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "RDH002-0005",
@@ -415,7 +415,7 @@
     "MARCA": "PUMA",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "RDH002-0005.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "RDH003-0001",
@@ -426,7 +426,7 @@
     "MARCA": "TALEZ",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "RDH003-0001.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "RDH003-0002",
@@ -437,7 +437,7 @@
     "MARCA": "TALEZ",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "RDH003-0002.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "RDH003-0003",
@@ -448,7 +448,7 @@
     "MARCA": "TALEZ",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "RDH003-0003.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "RDH003-0004",
@@ -459,7 +459,7 @@
     "MARCA": "TALEZ",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "RDH003-0004.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "RDH003-0005",
@@ -470,7 +470,7 @@
     "MARCA": "TALEZ",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "RDH003-0005.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "PDH001-0001",
@@ -481,7 +481,7 @@
     "MARCA": "TALEZ",
     "PRECIO UNITARIO": "$30000",
     "NOMBRE IMAGEN": "PDH001-0001.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "PDH001-0002",
@@ -492,7 +492,7 @@
     "MARCA": "TALEZ",
     "PRECIO UNITARIO": "$30000",
     "NOMBRE IMAGEN": "PDH001-0002.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "PDH001-0003",
@@ -503,7 +503,7 @@
     "MARCA": "TALEZ",
     "PRECIO UNITARIO": "$30000",
     "NOMBRE IMAGEN": "PDH001-0003.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "RDM001-0001",
@@ -514,7 +514,7 @@
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "RDM001-0001.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "RDM001-0002",
@@ -525,7 +525,7 @@
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "RDM001-0002.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "RDM001-0003",
@@ -536,7 +536,7 @@
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "RDM001-0003.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "RDM001-0004",
@@ -547,7 +547,7 @@
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "RDM001-0004.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "RDM001-0005",
@@ -558,7 +558,7 @@
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "RDM001-0005.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "RDM001-0006",
@@ -569,7 +569,7 @@
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "RDM001-0006.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "RDM001-0007",
@@ -580,7 +580,7 @@
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "RDM001-0007.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "RDM001-0008",
@@ -591,7 +591,7 @@
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "RDM001-0008.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "RDM001-0009",
@@ -602,7 +602,7 @@
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "RDM001-0009.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "RDM001-0010",
@@ -613,7 +613,7 @@
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "RDM001-0010.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "RDM001-0011",
@@ -624,7 +624,7 @@
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "RDM001-0011.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   },
   {
     "ID PROD": "RDM001-0012",
@@ -635,6 +635,6 @@
     "MARCA": "MARMELL",
     "PRECIO UNITARIO": "$20000",
     "NOMBRE IMAGEN": "RDM001-0012.png",
-    "STOCK DISPONIBLE": ""
+    "STOCK DISP.": ""
   }
 ]
