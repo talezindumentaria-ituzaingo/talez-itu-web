@@ -534,6 +534,12 @@ document.getElementById('btn-enviar-whatsapp')?.addEventListener('click', () => 
     const nombreInput = document.getElementById('cliente-nombre');
     const nombre = nombreInput ? nombreInput.value.trim() : "";
     
+    if (!nombre) {
+        alert('Por favor, ingresa tu nombre y apellido.');
+        if (nombreInput) nombreInput.focus();
+        return;
+    }
+
     const envio = "A coordinar (Sus productos estarán listos a partir de los 10 días posteriores a recibido el pago)";
     
     const selectPago = document.getElementById('cliente-pago');
@@ -547,12 +553,6 @@ document.getElementById('btn-enviar-whatsapp')?.addEventListener('click', () => 
         esBilleteraVirtual = true;
     } else {
         pago = "Efectivo";
-    }
-
-    if (!nombre) {
-        alert('Por favor, ingresa tu nombre y apellido.');
-        if (nombreInput) nombreInput.focus();
-        return;
     }
 
     let mensaje = `*¡Hola! Nuevo Pedido Web*%0A`;
@@ -592,12 +592,36 @@ document.getElementById('btn-enviar-whatsapp')?.addEventListener('click', () => 
     const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
 
     if (esBilleteraVirtual) {
-        const confirmarPago = confirm(`⚠️ MÉTODO DE PAGO: Billetera Virtual / Transferencia\n\nAlias: agusdiaz7.mp\nTotal: $${totalGeneral.toLocaleString('es-AR')}\n\n1. Recordá enviar el comprobante de la operación por WhatsApp.\n2. Hacé clic en "Aceptar" para abrir tu billetera virtual (o pasarela de pago) y luego continuar con el envío del pedido.`);
-        
-        if (confirmarPago) {
-            window.open("https://link.mercadopago.com.ar/talez", "_blank"); 
-        }
+        mostrarModalPagoVirtual(totalGeneral, urlWhatsApp);
+    } else {
+        window.open(urlWhatsApp, '_blank');
     }
-
-    window.open(urlWhatsApp, '_blank');
 });
+
+function mostrarModalPagoVirtual(total, urlWhatsApp) {
+    const modal = document.getElementById('modal-pago-virtual');
+    const spanTotal = document.getElementById('modal-total-texto');
+    const btnWhatsApp = document.getElementById('btn-continuar-whatsapp');
+    const btnCerrarModal = document.getElementById('btn-cerrar-modal');
+
+    if (spanTotal) spanTotal.textContent = `$${total.toLocaleString('es-AR')}`;
+    if (modal) modal.style.display = 'flex';
+
+    // Limpiar eventos anteriores clonando o reemplazando el botón
+    const nuevoBtnWhatsApp = btnWhatsApp.cloneNode(true);
+    btnWhatsApp.parentNode.replaceChild(nuevoBtnWhatsApp, btnWhatsApp);
+
+    document.getElementById('btn-continuar-whatsapp').addEventListener('click', () => {
+        modal.style.display = 'none';
+        window.open(urlWhatsApp, '_blank');
+    });
+
+    if (btnCerrarModal) {
+        const nuevoBtnCerrar = btnCerrarModal.cloneNode(true);
+        btnCerrarModal.parentNode.replaceChild(nuevoBtnCerrar, btnCerrarModal);
+        
+        document.getElementById('btn-cerrar-modal').addEventListener('click', () => {
+            modal.style.display = 'none';
+        });
+    }
+}
