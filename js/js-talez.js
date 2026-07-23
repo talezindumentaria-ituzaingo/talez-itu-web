@@ -543,7 +543,7 @@ document.getElementById('btn-enviar-whatsapp')?.addEventListener('click', () => 
     let esBilleteraVirtual = false;
 
     if (tipoPagoSeleccionado.toLowerCase().includes('billetera') || tipoPagoSeleccionado.toLowerCase().includes('transferencia')) {
-        pago = "Billetera Virtual / Transferencia (Alias: TALEZ.PAGOS)";
+        pago = "Billetera Virtual / Transferencia (Alias: agusdiaz7.mp)";
         esBilleteraVirtual = true;
     } else {
         pago = "Efectivo";
@@ -592,7 +592,7 @@ document.getElementById('btn-enviar-whatsapp')?.addEventListener('click', () => 
     const urlWhatsApp = `https://wa.me/${numeroWhatsApp}?text=${mensaje}`;
 
     if (esBilleteraVirtual) {
-        const confirmarPago = confirm(`⚠️ MÉTODO DE PAGO: Billetera Virtual / Transferencia\n\nAlias: TALEZ.PAGOS\nTotal: $${totalGeneral.toLocaleString('es-AR')}\n\n1. Recordá enviar el comprobante de la operación por WhatsApp.\n2. Hacé clic en "Aceptar" para abrir tu billetera virtual (o pasarela de pago) y luego continuar con el envío del pedido.`);
+        const confirmarPago = confirm(`⚠️ MÉTODO DE PAGO: Billetera Virtual / Transferencia\n\nAlias: agusdiaz7.mp\nTotal: $${totalGeneral.toLocaleString('es-AR')}\n\n1. Recordá enviar el comprobante de la operación por WhatsApp.\n2. Hacé clic en "Aceptar" para abrir tu billetera virtual (o pasarela de pago) y luego continuar con el envío del pedido.`);
         
         if (confirmarPago) {
             window.open("https://link.mercadopago.com.ar/talez", "_blank"); 
