@@ -433,7 +433,6 @@ function agregarAlCarrito(producto) {
         carrito.push(producto);
     }
     
-    // Guardar en sessionStorage para que se resetee al cerrar o actualizar la pestaña
     sessionStorage.setItem('talez_carrito', JSON.stringify(carrito));
     actualizarContadorCarrito();
     
@@ -525,7 +524,8 @@ window.eliminarDelCarrito = function(codigo) {
     renderizarContenidoCarrito();
 };
 
-document.getElementById('btn-enviar-whatsapp')?.addEventListener('click', () => {
+/*----SECCION DE MODAL DE PAGOS--*/
+document.getElementById('btn-enviar-whatsapp')?.addEventListener('click', async () => {
     if (carrito.length === 0) {
         alert('Tu carrito está vacío.');
         return;
@@ -540,11 +540,8 @@ document.getElementById('btn-enviar-whatsapp')?.addEventListener('click', () => 
         return;
     }
 
-    const envio = "A coordinar (Sus productos estarán listos a partir de los 10 días posteriores a recibido el pago)";
-    
     const selectPago = document.getElementById('cliente-pago');
     const tipoPagoSeleccionado = selectPago ? selectPago.value : "Efectivo";
-    
     let pago = "";
     let esBilleteraVirtual = false;
 
@@ -555,15 +552,11 @@ document.getElementById('btn-enviar-whatsapp')?.addEventListener('click', () => 
         pago = "Efectivo";
     }
 
-    let mensaje = `*¡Hola! Nuevo Pedido Web*%0A`;
-    mensaje += `*Cliente:* ${nombre}%0A`;
-    mensaje += `*Entrega:* ${envio}%0A`;
-    mensaje += `Pago: *${pago}*%0A`;
-    mensaje += `Detalle de productos:%0A`;
-
+    // Calcular el total general y preparar los datos para Google Sheets
     let totalGeneral = 0;
+    const idPedido = 'PED-' + Date.now().toString().slice(-6); // ID único del pedido basado en timestamp
 
-    carrito.forEach(item => {
+    const itemsParaGuardar = carrito.map(item => {
         let precioLimpio = 0;
         if (typeof item.precio === 'string' && item.precio !== 'Consultar') {
             precioLimpio = parseFloat(item.precio.replace(/[^0-9,.]/g, '').replace(',', '.')) || 0;
@@ -574,18 +567,56 @@ document.getElementById('btn-enviar-whatsapp')?.addEventListener('click', () => 
         const subtotal = precioLimpio * item.cantidad;
         if (precioLimpio > 0) totalGeneral += subtotal;
 
+        // Columnas requeridas: ID PEDIDO | ID PROD | DESCRIPCION | CATEGORIA | TALLE | MARCA | PRECIO UNITARIO | CANTIDAD PEDIDA | TOTAL COMPRA | CLIENTE
+        return {
+            idPedido: idPedido,
+            idProd: item.codigo || "",
+            descripcion: item.nombre || "",
+            categoria: item.categoria || "", 
+            talle: item.talle || "Único",
+            marca: item.marca || "",
+            precioUnitario: precioLimpio,
+            cantidadPedida: item.cantidad,
+            totalCompra: subtotal,
+            cliente: nombre
+        };
+    });
+
+    const urlAppsScript = 'https://script.google.com/macros/s/AKfycbw6tzg1ti5j6xb0USdKQlSLy56wer2kW4aSHiLA5SoSJJPH_2qikhizS494r04aX01p/exec'; // <--- Reemplaza con tu URL de Google Apps Script
+    
+    if (urlAppsScript && urlAppsScript !== 'https://script.google.com/macros/s/AKfycbw6tzg1ti5j6xb0USdKQlSLy56wer2kW4aSHiLA5SoSJJPH_2qikhizS494r04aX01p/exec') {
+        try {
+            // Mostramos indicador visual opcional de carga si gustas
+            await fetch(urlAppsScript, {
+                method: 'POST',
+                mode: 'no-cors',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ hoja: 'pedidosWeb', datos: itemsParaGuardar })
+            });
+        } catch (error) {
+            console.error('Error al registrar en Google Sheets:', error);
+        }
+    }
+
+    // Construir mensaje de WhatsApp
+    const envio = "A coordinar (Sus productos estarán listos a partir de los 10 días posteriores a recibido el pago)";
+    let mensaje = `*¡Hola! Nuevo Pedido Web* (${idPedido})%0A`;
+    mensaje += `*Cliente:* ${nombre}%0A`;
+    mensaje += `*Entrega:* ${envio}%0A`;
+    mensaje += `Pago: *${pago}*%0A`;
+    mensaje += `Detalle de productos:%0A`;
+
+    carrito.forEach(item => {
         mensaje += `• *${item.nombre}*%0A`;
         if (item.talle && item.talle !== 'Único') {
             mensaje += `- Talle: *${item.talle}*%0A`;
         }
         mensaje += `- Cantidad: *${item.cantidad}*%0A`;
-        mensaje += `- ID: *${item.codigo}*%0A`;
     });
 
     if (totalGeneral > 0) {
         mensaje += `*Total Estimado: $${totalGeneral.toLocaleString('es-AR')}*%0A`;
     }
-
     mensaje += `¡Aguardo confirmación para coordinar la entrega!`;
 
     const numeroWhatsApp = "5491150063535"; 
@@ -601,19 +632,64 @@ document.getElementById('btn-enviar-whatsapp')?.addEventListener('click', () => 
 function mostrarModalPagoVirtual(total, urlWhatsApp) {
     const modal = document.getElementById('modal-pago-virtual');
     const spanTotal = document.getElementById('modal-total-texto');
-    const btnWhatsApp = document.getElementById('btn-continuar-whatsapp');
+    const radioMp = document.querySelector('input[name="metodo-pago-opcion"][value="mercadopago"]');
+    const radioTransf = document.querySelector('input[name="metodo-pago-opcion"][value="transferencia"]');
+    const seccionTransf = document.getElementById('seccion-transferencia');
+    const btnEjecutarPago = document.getElementById('btn-ejecutar-pago');
     const btnCerrarModal = document.getElementById('btn-cerrar-modal');
+    const btnCopiarAlias = document.getElementById('btn-copiar-alias');
 
     if (spanTotal) spanTotal.textContent = `$${total.toLocaleString('es-AR')}`;
     if (modal) modal.style.display = 'flex';
 
-    // Limpiar eventos anteriores clonando o reemplazando el botón
-    const nuevoBtnWhatsApp = btnWhatsApp.cloneNode(true);
-    btnWhatsApp.parentNode.replaceChild(nuevoBtnWhatsApp, btnWhatsApp);
+    // Estado inicial: Seleccionado Mercado Pago por defecto
+    if (radioMp) radioMp.checked = true;
+    if (seccionTransf) seccionTransf.style.display = 'none';
+    if (btnEjecutarPago) btnEjecutarPago.textContent = 'Pagar con Mercado Pago';
 
-    document.getElementById('btn-continuar-whatsapp').addEventListener('click', () => {
+    // Cambiar dinámicamente según la opción elegida
+    const actualizarVistaModal = () => {
+        if (radioTransf && radioTransf.checked) {
+            seccionTransf.style.display = 'block';
+            btnEjecutarPago.textContent = 'Continuar a WhatsApp';
+        } else {
+            seccionTransf.style.display = 'none';
+            btnEjecutarPago.textContent = 'Pagar con Mercado Pago';
+        }
+    };
+
+    radioMp?.addEventListener('change', actualizarVistaModal);
+    radioTransf?.addEventListener('change', actualizarVistaModal);
+
+    // Botón Copiar Alias
+    if (btnCopiarAlias) {
+        const nuevoBtnCopiar = btnCopiarAlias.cloneNode(true);
+        btnCopiarAlias.parentNode.replaceChild(nuevoBtnCopiar, btnCopiarAlias);
+        
+        document.getElementById('btn-copiar-alias').addEventListener('click', () => {
+            const aliasTexto = document.getElementById('texto-alias').textContent;
+            navigator.clipboard.writeText(aliasTexto).then(() => {
+                const btn = document.getElementById('btn-copiar-alias');
+                btn.textContent = '¡Copiado!';
+                setTimeout(() => { btn.textContent = 'Copiar'; }, 2000);
+            });
+        });
+    }
+
+    // Botón Principal de Acción del Modal
+    const nuevoBtnEjecutar = btnEjecutarPago.cloneNode(true);
+    btnEjecutarPago.parentNode.replaceChild(nuevoBtnEjecutar, btnEjecutarPago);
+
+    document.getElementById('btn-ejecutar-pago').addEventListener('click', () => {
         modal.style.display = 'none';
-        window.open(urlWhatsApp, '_blank');
+        
+        if (radioTransf && radioTransf.checked) {
+            window.open(urlWhatsApp, '_blank');
+        } else {
+
+            window.open("https://link.mercadopago.com.ar/talez", "_blank");
+            setTimeout(() => { window.open(urlWhatsApp, '_blank'); }, 1000);
+        }
     });
 
     if (btnCerrarModal) {

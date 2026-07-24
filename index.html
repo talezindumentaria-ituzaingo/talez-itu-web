@@ -195,21 +195,41 @@
             </div>
         </div>
 <!-- Modal Personalizado de Pago Virtual -->
-<div id="modal-pago-virtual" class="modal-pago-overlay" style="display: none;">
-    <div class="modal-pago-contenido">
-        <h3>⚠️ Método de Pago: Transferencia</h3>
-        <p><strong>Alias:</strong> agusdiaz7.mp</p>
-        <p><strong>Total:</strong> <span id="modal-total-texto">$0</span></p>
-        <div class="modal-instrucciones">
-            <p>1. Realizá el pago a través de tu billetera o banco.</p>
-            <p>2. Recordá <strong>enviar el comprobante</strong> por WhatsApp.</p>
+        <div id="modal-pago-virtual" class="modal-pago-overlay" style="display: none;">
+            <div class="modal-pago-contenido">
+                <h3>💳 Seleccioná el Medio de Pago</h3>
+                <p class="modal-total-line"><strong>Total a Pagar:</strong> <span id="modal-total-texto">$0</span></p>
+                
+                <!-- Opciones con Radio Button Redondo -->
+                <div class="opciones-pago-grupo">
+                    <label class="radio-label">
+                        <input type="radio" name="metodo-pago-opcion" value="mercadopago" checked>
+                        <span>Mercado Pago (App Directa)</span>
+                    </label>
+                    <label class="radio-label">
+                        <input type="radio" name="metodo-pago-opcion" value="transferencia">
+                        <span>Transferencia Bancaria / Otras Billeteras</span>
+                    </label>
+                </div>
+
+                <!-- Contenedor para Transferencia (Alias + Copiar) -->
+                <div id="seccion-transferencia" class="seccion-transferencia" style="display: none;">
+                    <div class="alias-box">
+                        <span><strong>Alias:</strong> <span id="texto-alias">agusdiaz7.mp</span></span>
+                        <button type="button" id="btn-copiar-alias" class="btn-copiar">Copiar</button>
+                    </div>
+                    <div class="modal-instrucciones">
+                        <p>1. Copiá el alias y realizá la transferencia desde tu banco u otra billetera.</p>
+                        <p>2. Al finalizar, hacé clic en continuar para enviar el pedido y el comprobante por WhatsApp.</p>
+                    </div>
+                </div>
+
+                <div class="modal-botones">
+                    <button id="btn-ejecutar-pago" class="hm-btn btn-primary">Pagar con Mercado Pago</button>
+                    <button id="btn-cerrar-modal" class="hm-btn" style="background: #ccc; color: #333;">Cancelar</button>
+                </div>
+            </div>
         </div>
-        <div class="modal-botones">
-            <button id="btn-continuar-whatsapp" class="hm-btn btn-primary">Continuar a WhatsApp</button>
-            <button id="btn-cerrar-modal" class="hm-btn" style="background: #ccc; color: #333;">Cancelar</button>
-        </div>
-    </div>
-</div>
         <footer>
             <div class="nav-separator mx-auto mb-4 align-items-center"></div>
             <div class="container text-center align-items-center">
