@@ -270,9 +270,7 @@ function renderProducts(categoria, subcategoria, marca) {
         const cardHTML = `
             <div class="product-item ${claseAnim}" data-aos="fade-up" data-aos-duration="${delayAOS}">
                 <div class="p-portada">
-                    <a href="#">
-                        <img src="${rutaImagen}" alt="${descripcion}" onerror="console.warn('Ruta fallida:', '${rutaImagen}'); this.src='images/placeholder.jpg';">
-                    </a>
+                    <img src="${rutaImagen}" alt="${descripcion}" class="img-zoomable" onclick="abrirZoomImagen('${rutaImagen}', '${descripcion}')" onerror="console.warn('Ruta fallida:', '${rutaImagen}'); this.src='images/placeholder.jpg';" style="cursor: pointer;">
                 </div>
                 <div class="p-info">
                     <a href="#"><h3>${descripcion}</h3></a>
@@ -284,6 +282,9 @@ function renderProducts(categoria, subcategoria, marca) {
                         data-codigo="${codigoUnico}"
                         data-nombre="${descripcion}"
                         data-precio="${precio}"
+                        data-categoria="${catClean}"
+                        data-marca="${marClean}"
+                        data-talle-inicial="${tallesRaw}"
                         data-imagen="${rutaImagen}">
                         AGREGAR AL CARRITO
                     </button>
@@ -294,6 +295,16 @@ function renderProducts(categoria, subcategoria, marca) {
     });
 }
 
+window.abrirZoomImagen = function(urlImagen, nombreProducto) {
+    const modal = document.getElementById('modal-zoom-imagen');
+    const imgAmpliada = document.getElementById('imagen-ampliada');
+    const tituloAmpliado = document.getElementById('titulo-ampliado');
+
+    if (imgAmpliada) imgAmpliada.src = urlImagen;
+    if (tituloAmpliado) tituloAmpliado.textContent = nombreProducto;
+    if (modal) modal.style.display = 'flex';
+};
+
 document.addEventListener("DOMContentLoaded", () => {
     initDynamicStore();
     actualizarContadorCarrito();
@@ -303,7 +314,6 @@ document.addEventListener("DOMContentLoaded", () => {
     const btnCerrar = document.getElementById('cerrar-carrito');
     const iconosCarrito = document.querySelectorAll('.hm-icon-cart'); 
 
-    // Control del Menú Móvil (Hamburguesa)
     const menuMovil = document.querySelector('.header-menu-movil');
     const iconMenu = document.querySelector('.icon-menu');
     const menuClose = document.querySelector('.cerrar-menu');
@@ -322,7 +332,6 @@ document.addEventListener("DOMContentLoaded", () => {
         });
     }
 
-    // Cerrar menú móvil al hacer clic fuera de él
     document.addEventListener('click', (e) => {
         if (menuMovil && menuMovil.classList.contains('active')) {
             if (!menuMovil.contains(e.target) && !iconMenu.contains(e.target)) {
@@ -384,6 +393,8 @@ document.addEventListener("DOMContentLoaded", () => {
                     nombre: nombreConTalle,
                     precio: btn.getAttribute('data-precio'),
                     imagen: btn.getAttribute('data-imagen'),
+                    categoria: btn.getAttribute('data-categoria') || "",
+                    marca: btn.getAttribute('data-marca') || "",
                     talle: talleSeleccionado,
                     cantidad: 1
                 };
@@ -420,6 +431,15 @@ document.addEventListener("DOMContentLoaded", () => {
             viewItems.style.flexDirection = 'column';
             viewItems.style.flex = '1';
             if (carritoTitulo) carritoTitulo.textContent = 'Tu Carrito de Compras';
+        });
+    }
+
+    const modalZoom = document.getElementById('modal-zoom-imagen');
+    if (modalZoom) {
+        modalZoom.addEventListener('click', (e) => {
+            if (e.target === modalZoom || e.target.classList.contains('cerrar-zoom')) {
+                modalZoom.style.display = 'none';
+            }
         });
     }
 });
@@ -524,7 +544,6 @@ window.eliminarDelCarrito = function(codigo) {
     renderizarContenidoCarrito();
 };
 
-/*----SECCION DE MODAL DE PAGOS--*/
 document.getElementById('btn-enviar-whatsapp')?.addEventListener('click', async () => {
     if (carrito.length === 0) {
         alert('Tu carrito está vacío.');
@@ -552,9 +571,8 @@ document.getElementById('btn-enviar-whatsapp')?.addEventListener('click', async 
         pago = "Efectivo";
     }
 
-    // Calcular el total general y preparar los datos para Google Sheets
     let totalGeneral = 0;
-    const idPedido = 'PED-' + Date.now().toString().slice(-6); // ID único del pedido basado en timestamp
+    const idPedido = 'PED-' + Date.now().toString().slice(-6);
 
     const itemsParaGuardar = carrito.map(item => {
         let precioLimpio = 0;
@@ -567,7 +585,6 @@ document.getElementById('btn-enviar-whatsapp')?.addEventListener('click', async 
         const subtotal = precioLimpio * item.cantidad;
         if (precioLimpio > 0) totalGeneral += subtotal;
 
-        // Columnas requeridas: ID PEDIDO | ID PROD | DESCRIPCION | CATEGORIA | TALLE | MARCA | PRECIO UNITARIO | CANTIDAD PEDIDA | TOTAL COMPRA | CLIENTE
         return {
             idPedido: idPedido,
             idProd: item.codigo || "",
@@ -582,11 +599,10 @@ document.getElementById('btn-enviar-whatsapp')?.addEventListener('click', async 
         };
     });
 
-    const urlAppsScript = 'https://script.google.com/macros/s/AKfycbw6tzg1ti5j6xb0USdKQlSLy56wer2kW4aSHiLA5SoSJJPH_2qikhizS494r04aX01p/exec'; // <--- Reemplaza con tu URL de Google Apps Script
+    const urlAppsScript = 'https://script.google.com/macros/s/AKfycbw6tzg1ti5j6xb0USdKQlSLy56wer2kW4aSHiLA5SoSJJPH_2qikhizS494r04aX01p/exec';
     
     if (urlAppsScript && urlAppsScript !== 'https://script.google.com/macros/s/AKfycbw6tzg1ti5j6xb0USdKQlSLy56wer2kW4aSHiLA5SoSJJPH_2qikhizS494r04aX01p/exec') {
         try {
-            // Mostramos indicador visual opcional de carga si gustas
             await fetch(urlAppsScript, {
                 method: 'POST',
                 mode: 'no-cors',
@@ -598,7 +614,6 @@ document.getElementById('btn-enviar-whatsapp')?.addEventListener('click', async 
         }
     }
 
-    // Construir mensaje de WhatsApp
     const envio = "A coordinar (Sus productos estarán listos a partir de los 10 días posteriores a recibido el pago)";
     let mensaje = `*¡Hola! Nuevo Pedido Web* (${idPedido})%0A`;
     mensaje += `*Cliente:* ${nombre}%0A`;
@@ -642,12 +657,10 @@ function mostrarModalPagoVirtual(total, urlWhatsApp) {
     if (spanTotal) spanTotal.textContent = `$${total.toLocaleString('es-AR')}`;
     if (modal) modal.style.display = 'flex';
 
-    // Estado inicial: Seleccionado Mercado Pago por defecto
     if (radioMp) radioMp.checked = true;
     if (seccionTransf) seccionTransf.style.display = 'none';
     if (btnEjecutarPago) btnEjecutarPago.textContent = 'Pagar con Mercado Pago';
 
-    // Cambiar dinámicamente según la opción elegida
     const actualizarVistaModal = () => {
         if (radioTransf && radioTransf.checked) {
             seccionTransf.style.display = 'block';
@@ -661,7 +674,6 @@ function mostrarModalPagoVirtual(total, urlWhatsApp) {
     radioMp?.addEventListener('change', actualizarVistaModal);
     radioTransf?.addEventListener('change', actualizarVistaModal);
 
-    // Botón Copiar Alias
     if (btnCopiarAlias) {
         const nuevoBtnCopiar = btnCopiarAlias.cloneNode(true);
         btnCopiarAlias.parentNode.replaceChild(nuevoBtnCopiar, btnCopiarAlias);
@@ -676,7 +688,6 @@ function mostrarModalPagoVirtual(total, urlWhatsApp) {
         });
     }
 
-    // Botón Principal de Acción del Modal
     const nuevoBtnEjecutar = btnEjecutarPago.cloneNode(true);
     btnEjecutarPago.parentNode.replaceChild(nuevoBtnEjecutar, btnEjecutarPago);
 
@@ -686,7 +697,6 @@ function mostrarModalPagoVirtual(total, urlWhatsApp) {
         if (radioTransf && radioTransf.checked) {
             window.open(urlWhatsApp, '_blank');
         } else {
-
             window.open("https://link.mercadopago.com.ar/talez", "_blank");
             setTimeout(() => { window.open(urlWhatsApp, '_blank'); }, 1000);
         }

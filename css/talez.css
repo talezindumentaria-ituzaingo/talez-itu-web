@@ -894,3 +894,73 @@ footer {
     cursor: pointer;
     font-size: 0.9rem;
 }
+
+/*---modal zoom--*/
+.zoom-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 999999;
+    padding: 20px;
+}
+
+.zoom-modal-contenido {
+    position: relative;
+    background: #ffffff;
+    padding: 20px;
+    border-radius: 12px;
+    max-width: 90%;
+    max-height: 90vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+}
+
+.zoom-modal-contenido img {
+    max-width: 100%;
+    max-height: 70vh;
+    object-fit: contain;
+    border-radius: 8px;
+}
+
+.zoom-titulo {
+    margin-top: 15px;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #333;
+    text-align: center;
+}
+
+.zoom-cerrar {
+    position: absolute;
+    top: 10px;
+    right: 15px;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #333;
+    cursor: pointer;
+    background: none;
+    border: none;
+    line-height: 1;
+}
+
+.zoom-cerrar:hover {
+    color: #000;
+}
+
+/* Cursor de lupa o pointer en las imágenes del carrito para indicar que se pueden ampliar */
+.carrito-item img {
+    cursor: pointer;
+    transition: transform 0.2s ease;
+}
+
+.carrito-item img:hover {
+    transform: scale(1.03);
+}
